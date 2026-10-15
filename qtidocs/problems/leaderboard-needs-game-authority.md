@@ -1,6 +1,6 @@
 ---
 title: LEADERBOARD_NEEDS_GAME_AUTHORITY
-description: The stat is used by a leaderboard that requires game authority, or the leaderboard configuration requires a stat with `authority: game`.
+description: "The stat is used by a leaderboard that requires game authority, or the leaderboard configuration requires a stat with `authority: game`."
 order: 161
 ---
 
