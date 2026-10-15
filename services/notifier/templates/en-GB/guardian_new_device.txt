@@ -1,0 +1,8 @@
+New sign-in on {{child_name}}'s account
+
+{{child_name}}'s account was just used to sign in from {{device}}, near {{location}}.
+
+You can see and end their sessions from the family dashboard.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

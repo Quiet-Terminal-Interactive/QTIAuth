@@ -1,0 +1,8 @@
+Updated terms
+
+Our terms have changed. As {{child_name}}'s guardian, please review and accept them.
+
+Review terms: {{dashboard_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

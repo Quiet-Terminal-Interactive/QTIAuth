@@ -1,0 +1,8 @@
+<mj-section padding="8px 0 24px">
+  <mj-column>
+    <mj-text color="{{colors.text_muted}}" font-size="12px" line-height="18px">
+      {{product_name}} &middot; {{company_name}}<br />
+      Questions? Contact <a href="mailto:{{support_email}}" style="color: {{colors.primary}};">{{support_email}}</a>.
+    </mj-text>
+  </mj-column>
+</mj-section>

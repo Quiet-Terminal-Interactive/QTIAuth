@@ -1,0 +1,6 @@
+Update on your report
+
+Hi {{name}}, we've reviewed your report ({{reference}}). Outcome: {{outcome}}.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

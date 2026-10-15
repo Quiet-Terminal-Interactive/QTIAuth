@@ -1,0 +1,29 @@
+{
+  "name": "@qtiauth/identity",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/service.ts"
+  },
+  "scripts": {
+    "start": "node src/main.ts"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "^2.0.2",
+    "@qtiauth/auth-context": "workspace:*",
+    "@qtiauth/bus": "workspace:*",
+    "@qtiauth/common": "workspace:*",
+    "@qtiauth/config": "workspace:*",
+    "@qtiauth/db": "workspace:*",
+    "@qtiauth/service-kit": "workspace:*",
+    "@qtiauth/text-filter": "workspace:*",
+    "@simplewebauthn/server": "^13.2.2",
+    "fflate": "^0.8.2",
+    "jose": "^6.2.12",
+    "kysely": "^0.28.8",
+    "ua-parser-js": "^2.0.6",
+    "zod": "^4.6.5",
+    "@qtiauth/markdown": "workspace:*"
+  }
+}

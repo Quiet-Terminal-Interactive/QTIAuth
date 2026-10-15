@@ -1,0 +1,2 @@
+# Alerts are evaluated by Prometheus and routed by Alertmanager. This directory is for Grafana-managed alerting if you prefer it.
+apiVersion: 1

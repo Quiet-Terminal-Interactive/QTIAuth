@@ -1,0 +1,23 @@
+---
+subject: "A webhook endpoint was disabled"
+vars: [url, failures, admin_url]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>A webhook endpoint was disabled</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">Webhook endpoint disabled</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">The webhook endpoint <strong>{{url}}</strong> was disabled after {{failures}} failed deliveries in a row.</mj-text>
+        <mj-button href="{{admin_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">Review endpoint</mj-button>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

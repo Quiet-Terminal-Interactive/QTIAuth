@@ -1,0 +1,29 @@
+{
+  "name": "@qtiauth/notifier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/service.ts",
+    "./templates": "./src/templates.ts"
+  },
+  "scripts": {
+    "start": "node src/main.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.1149.0",
+    "@qtiauth/auth-context": "workspace:*",
+    "@qtiauth/bus": "workspace:*",
+    "@qtiauth/common": "workspace:*",
+    "@qtiauth/config": "workspace:*",
+    "@qtiauth/db": "workspace:*",
+    "@qtiauth/service-kit": "workspace:*",
+    "kysely": "^0.28.8",
+    "mjml": "^5.4.1",
+    "nodemailer": "^10.1.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/mjml": "^5.0.0"
+  }
+}

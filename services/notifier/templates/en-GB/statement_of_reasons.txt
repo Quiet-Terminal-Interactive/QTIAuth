@@ -1,0 +1,14 @@
+We took action on your account
+
+Hi {{name}}, we found that your account broke this rule: {{rule_title}}.
+
+{{rule_text}}
+
+Action: {{action}}{{#if duration}} for {{duration}}{{/if}}.{{#if restrictions}} Restrictions: {{restrictions}}.{{/if}}
+
+If you think we got it wrong, you can appeal.
+
+Appeal: {{appeal_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

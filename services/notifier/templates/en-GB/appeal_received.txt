@@ -1,0 +1,6 @@
+We got your appeal
+
+Hi {{name}}, your appeal ({{reference}}) is with our team. We'll let you know the outcome.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

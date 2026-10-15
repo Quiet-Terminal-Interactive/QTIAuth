@@ -1,0 +1,10 @@
+Your email address was changed
+
+Hi {{name}}, the email for your account was changed to {{new_email}}.
+
+If this wasn't you, use the button below within 7 days to undo the change and secure your account.
+
+This wasn't me: {{revert_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

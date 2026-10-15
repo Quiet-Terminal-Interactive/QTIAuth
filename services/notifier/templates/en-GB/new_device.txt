@@ -1,0 +1,8 @@
+New sign-in
+
+Hi {{name}}, your account was just used to sign in from {{device}}, near {{location}}.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

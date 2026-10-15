@@ -1,0 +1,6 @@
+You're all set
+
+Hi {{name}}, your parent or guardian approved your account. You can sign in and start using {{product_name}}.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

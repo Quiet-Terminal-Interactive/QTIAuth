@@ -1,0 +1,8 @@
+Is this sorted?
+
+Hi {{name}}, we're waiting for your reply on #{{number}}. If we don't hear back, we'll close it on {{close_at}}.
+
+Reply: {{ticket_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

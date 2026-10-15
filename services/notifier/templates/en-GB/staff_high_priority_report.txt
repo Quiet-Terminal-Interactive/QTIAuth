@@ -1,0 +1,8 @@
+New {{priority}} priority report
+
+A {{type}} report needs attention. Due by {{sla_due_at}}.
+
+Open report: {{report_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

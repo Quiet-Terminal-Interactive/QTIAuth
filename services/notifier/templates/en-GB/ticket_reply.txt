@@ -1,0 +1,10 @@
+New reply on your ticket
+
+Hi {{name}}, there's a new reply on #{{number}} ({{subject}}).
+
+Read the reply: {{ticket_url}}
+
+For your security we don't include the reply text in emails.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

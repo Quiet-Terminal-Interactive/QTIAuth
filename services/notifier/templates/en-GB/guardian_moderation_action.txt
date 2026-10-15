@@ -1,0 +1,6 @@
+Moderation action
+
+Our moderators took action on {{child_name}}'s account ({{action}}). {{child_name}} has been sent the reasons and how to appeal.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

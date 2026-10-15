@@ -1,0 +1,10 @@
+Open your family dashboard
+
+Use the button below to open the family dashboard. The link works once.
+
+Open dashboard: {{link_url}}
+
+If you didn't ask for this, you can ignore this email.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

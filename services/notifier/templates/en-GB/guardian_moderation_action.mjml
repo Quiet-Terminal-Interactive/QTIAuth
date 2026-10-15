@@ -1,0 +1,23 @@
+---
+subject: "Action was taken on {{child_name}}'s account"
+vars: [child_name, action]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>Action was taken on {{child_name}}'s account</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">Moderation action</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Our moderators took action on {{child_name}}'s account ({{action}}). {{child_name}} has been sent the reasons and how to appeal.</mj-text>
+
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

@@ -1,0 +1,8 @@
+We ended a session
+
+Hi {{name}}, a session on your account suddenly appeared in another country ({{country}}), so we ended it to keep you safe.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

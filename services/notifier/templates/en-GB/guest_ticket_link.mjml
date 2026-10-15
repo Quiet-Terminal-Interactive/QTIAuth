@@ -1,0 +1,24 @@
+---
+subject: "Your ticket #{{number}}"
+vars: [number, subject, ticket_url]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>Your ticket #{{number}}</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">We got your request</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Your ticket <strong>#{{number}}</strong> ({{subject}}) is with our team. Use this private link to follow it.</mj-text>
+        <mj-button href="{{ticket_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">View ticket</mj-button>
+        <mj-text color="{{colors.text_muted}}" font-size="13px" line-height="20px">Don't share this link: anyone with it can read and reply to your ticket.</mj-text>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

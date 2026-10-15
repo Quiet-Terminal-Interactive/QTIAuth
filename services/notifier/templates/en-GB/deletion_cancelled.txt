@@ -1,0 +1,8 @@
+Deletion cancelled
+
+Hi {{name}}, you signed in, so your account is no longer scheduled for deletion.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

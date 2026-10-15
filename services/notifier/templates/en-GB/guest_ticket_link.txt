@@ -1,0 +1,10 @@
+We got your request
+
+Your ticket #{{number}} ({{subject}}) is with our team. Use this private link to follow it.
+
+View ticket: {{ticket_url}}
+
+Don't share this link: anyone with it can read and reply to your ticket.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

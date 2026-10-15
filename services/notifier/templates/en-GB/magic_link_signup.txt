@@ -1,0 +1,10 @@
+Create your account
+
+Use the button below to continue creating your {{product_name}} account. The link works once and expires in {{expires_minutes}} minutes.
+
+Continue: {{link_url}}
+
+If you didn't ask for this, you can ignore this email.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

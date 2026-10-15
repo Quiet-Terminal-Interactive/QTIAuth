@@ -1,0 +1,8 @@
+Two-factor authentication is on
+
+Hi {{name}}, your account now asks for a code from your authenticator app when you sign in. Keep your recovery codes somewhere safe.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

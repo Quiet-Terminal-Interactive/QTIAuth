@@ -1,0 +1,14 @@
+{{child_name}}'s week
+
+Sign-ins: {{sign_in_count}} - Playtime: {{total_playtime_minutes}} minutes
+
+{{#each games}}{{this.name}}: {{this.playtime_minutes}} min{{/each}}
+
+{{#if apps}}Apps connected: {{#each apps}}{{this.name}} {{/each}}{{/if}}
+
+Open family dashboard: {{dashboard_url}}
+
+We never show you what they say or create.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

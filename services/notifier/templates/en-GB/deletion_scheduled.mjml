@@ -1,0 +1,24 @@
+---
+subject: "Your {{product_name}} account will be deleted"
+vars: [name, due_at]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>Your {{product_name}} account will be deleted</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">Account deletion scheduled</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Hi {{name}}, your account is scheduled for deletion on {{due_at}}. We've signed you out everywhere.</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Changed your mind? Just sign in before then and the deletion is cancelled.</mj-text>
+
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

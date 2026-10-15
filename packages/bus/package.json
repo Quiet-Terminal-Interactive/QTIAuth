@@ -1,0 +1,13 @@
+{
+  "name": "@qtiauth/bus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@qtiauth/common": "workspace:*",
+    "@nats-io/jetstream": "^3.4.0",
+    "@nats-io/nats-core": "^3.4.0",
+    "@nats-io/transport-node": "^3.4.0"
+  }
+}

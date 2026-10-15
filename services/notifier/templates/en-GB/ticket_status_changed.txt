@@ -1,0 +1,8 @@
+Ticket #{{number}} updated
+
+Hi {{name}}, your ticket ({{subject}}) is now {{status}}.
+
+View ticket: {{ticket_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

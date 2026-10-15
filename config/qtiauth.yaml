@@ -1,0 +1,197 @@
+branding:
+  product_name: "Example Account"
+  company_name: "Example Ltd"
+  support_email: "support@example.com"
+  logo: ./branding/logo.svg
+  favicon: ./branding/favicon.ico
+  default_locale: en-GB
+  locales: [en-GB]
+  colors:
+    scheme: dark
+    background: "#222034"
+    surface: "#2C2A44"
+    surface_raised: "#363352"
+    border: "#45416A"
+    text: "#F2F0FA"
+    text_muted: "#A9A5C6"
+    primary: "#5BB1EF"
+    primary_text: "#222034"
+    accent: "#BC6DE0"
+    success: "#80D35D"
+    warning: "#F7DA47"
+    danger: "#DD5F5F"
+    highlight: "#FF954F"
+    info: "#5BB1EF"
+    palette:
+      red: "#DD5F5F"
+      orange: "#FF954F"
+      green: "#80D35D"
+      yellow: "#F7DA47"
+      purple: "#BC6DE0"
+      blue: "#5BB1EF"
+
+surfaces:
+  account: { hosts: [me.example.com], base_path: / }
+  support: { hosts: [me.example.com], base_path: /support }
+  api: { hosts: [me.example.com], base_path: /api }
+
+cookies:
+  domain: null
+  secure: true
+  session_ttl: 7d
+  idle_timeout: 30d
+
+cors:
+  allowed_origins: []
+
+network:
+  # Add your reverse proxy's addresses. With the edge profile, trust the Compose "public" network.
+  trusted_proxies: []
+  # Header your proxy sets to the client's source port (Caddy in deploy/ sets X-Client-Port).
+  client_port_header: x-client-port
+  metrics_token: "${env:GATEWAY_METRICS_TOKEN}"
+
+infrastructure:
+  nats_url: nats://nats:4222
+  nats_user: qtiauth
+  nats_password: "${env:NATS_PASSWORD}"
+  valkey_url: redis://valkey:6379
+  internal_port: 3000
+  gateway_url: http://gateway:8081
+
+geoip:
+  source: dbip_lite
+  database_path: /var/lib/geoip/country.mmdb
+
+migrations:
+  auto_apply: true
+
+storage:
+  provider: none
+  # With the storage profile:
+  # provider: s3
+  # endpoint: http://storage:8333
+  # public_endpoint: https://files.example.com
+  # bucket: qtiauth
+  # access_key_id: "${env:S3_ACCESS_KEY_ID}"
+  # secret_access_key: "${env:S3_SECRET_ACCESS_KEY}"
+
+features:
+  auth:
+    password: { enabled: true }
+    magic_link: { enabled: true }
+    passkeys: { enabled: true }
+    totp: { enabled: true }
+    social:
+      google: { enabled: false, client_id: "${env:GOOGLE_CLIENT_ID}", client_secret: "${env:GOOGLE_CLIENT_SECRET}" }
+      github: { enabled: false, client_id: "${env:GITHUB_CLIENT_ID}", client_secret: "${env:GITHUB_CLIENT_SECRET}" }
+      discord: { enabled: false, client_id: "${env:DISCORD_CLIENT_ID}", client_secret: "${env:DISCORD_CLIENT_SECRET}" }
+      steam: { enabled: false, api_key: "${env:STEAM_WEB_API_KEY}" }
+      generic_oidc: []
+  session_security: { enabled: true }
+  oidc:
+    developer_portal: { enabled: true, max_clients_per_user: 10 }
+    backchannel_logout: { enabled: true }
+  games:
+    licensing: { enabled: true, max_devices: 3 }
+    steam: { enabled: false, publisher_key: "${env:STEAM_PUBLISHER_KEY}", apps: [] }
+    leaderboards: { enabled: true, require_game_authority: true }
+    playtime: { enabled: true }
+    cloud_saves: { enabled: false }
+    keys: { enabled: true }
+  support:
+    tickets: { enabled: true }
+    kb: { enabled: true }
+    guest_tickets: { enabled: true }
+    attachments: { enabled: false }
+
+captcha:
+  provider: altcha
+  altcha_hmac_key: "${env:ALTCHA_HMAC_KEY}"
+
+email:
+  provider: console
+  from:
+    auth: { name: "Example Auth", address: "auth@example.com" }
+    security: { name: "Example Security", address: "security@example.com" }
+    support: { name: "Example Support", address: "support@example.com" }
+  smtp:
+    host: "${env:SMTP_HOST:-localhost}"
+    port: 587
+    user: "${env:SMTP_USER}"
+    password: "${env:SMTP_PASSWORD}"
+  api_key: "${env:EMAIL_API_KEY}"
+
+accounts:
+  max_per_email: 2
+  deletion_grace: 30d
+
+password:
+  min_length: 10
+  max_length: 256
+  breach_check: true
+
+security:
+  step_up_window: 10m
+
+age:
+  boundaries: { teen: 13, older_teen: 16, adult: 18 }
+  assurance:
+    default_provider: self_declared
+    required_for: []
+
+parental:
+  consent_age: 13
+  pending_ttl: 14d
+  max_guardians: 2
+  graduation_grace: 30d
+
+session_security:
+  on_country_change: challenge
+  new_device_email: true
+
+legal:
+  public_history: true
+  directory: ./legal
+  required_at_signup: [terms, privacy]
+
+usernames:
+  min_length: 8
+  max_length: 18
+  charset: "[A-Za-z0-9_]"
+  change_cooldown: 30d
+  yearly_limit: 3
+  reserved: []
+  reserved_prefixes: []
+  release_hold: 90d
+
+oidc:
+  first_party_clients: []
+
+safety:
+  accountable_person: { name: "Not configured", role: "Not configured" }
+  csea_alert_emails: []
+  # Statutory minimums (SI 2026/268 reg 8)
+  csea_evidence_retention: 1y
+  csea_reference_retention: 5y
+  # Internal targets for submitting to the NCA by priority level (reg 6(6)-(7)).
+  nca_deadlines: { unassessed: 1h, priority_1: 1h, priority_2: 24h, priority_3: 72h }
+  bans: { require_second_approval: false }
+
+support:
+  auto_close_after: 7d
+
+webhooks:
+  disable_after_failures: 50
+  allow_private_targets: false
+  endpoints: []
+
+backups:
+  retention: 35d
+  destination: { type: volume, path: /backups }
+
+observability:
+  log_level: info
+  # With the observability profile, send traces to Tempo:
+  # otlp_endpoint: http://tempo:4318
+  otlp_endpoint: null

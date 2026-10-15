@@ -1,0 +1,23 @@
+---
+subject: "We got your appeal"
+vars: [name, reference]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>We got your appeal</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">We got your appeal</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Hi {{name}}, your appeal ({{reference}}) is with our team. We'll let you know the outcome.</mj-text>
+
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

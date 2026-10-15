@@ -1,0 +1,15 @@
+{
+  "name": "@qtiauth/db",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@qtiauth/common": "workspace:*",
+    "kysely": "^0.28.8",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5"
+  }
+}

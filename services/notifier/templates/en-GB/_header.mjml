@@ -1,0 +1,5 @@
+<mj-section padding="24px 0 8px">
+  <mj-column>
+    <mj-image src="{{logo_url}}" alt="{{product_name}}" width="48px" align="left" padding="0 24px" />
+  </mj-column>
+</mj-section>

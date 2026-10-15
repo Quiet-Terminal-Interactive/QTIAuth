@@ -1,0 +1,10 @@
+Your email address was restored
+
+Hi {{name}}, we changed your email back and signed you out everywhere.
+
+Set a new password now to secure your account.
+
+Set a new password: {{reset_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

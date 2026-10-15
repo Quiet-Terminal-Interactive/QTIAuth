@@ -1,0 +1,26 @@
+---
+subject: "We took action on your account"
+vars: [name, action, rule_title, rule_text, duration, appeal_url, restrictions]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>We took action on your account</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">We took action on your account</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Hi {{name}}, we found that your account broke this rule: <strong>{{rule_title}}</strong>.</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">{{rule_text}}</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Action: <strong>{{action}}</strong>{{#if duration}} for {{duration}}{{/if}}.{{#if restrictions}} Restrictions: {{restrictions}}.{{/if}}</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">If you think we got it wrong, you can appeal.</mj-text>
+        <mj-button href="{{appeal_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">Appeal</mj-button>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

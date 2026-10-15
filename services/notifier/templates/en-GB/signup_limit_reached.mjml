@@ -1,0 +1,25 @@
+---
+subject: "Someone tried to create an account with this email"
+vars: [login_url]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>Someone tried to create an account with this email</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">Account limit reached</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Someone tried to create a new {{product_name}} account with this email address, but it already has the maximum number of accounts.</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">If it was you, sign in to your existing account instead.</mj-text>
+        <mj-button href="{{login_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">Sign in</mj-button>
+        <mj-text color="{{colors.text_muted}}" font-size="13px" line-height="20px">If you didn't ask for this, you can ignore this email.</mj-text>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

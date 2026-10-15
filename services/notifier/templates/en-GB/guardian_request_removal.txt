@@ -1,0 +1,8 @@
+A request from {{child_name}}
+
+{{child_name}} asked to remove the guardian link from their account. A guardian needs to approve it.
+
+Review request: {{dashboard_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

@@ -1,0 +1,8 @@
+A restricted case needs review
+
+A new restricted case was opened. Open it from the moderation console with the right access.
+
+Open case: {{case_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

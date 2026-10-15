@@ -1,0 +1,10 @@
+Confirm it's you
+
+Hi {{name}}, use the button below to confirm it's you. Open it on the same device you started on.
+
+Confirm: {{link_url}}
+
+If you didn't ask for this, you can ignore this email.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

@@ -1,0 +1,10 @@
+We've updated our {{title}}
+
+{{summary}}
+
+{{#if material}}As {{child_name}}'s guardian, please review and accept the changes from the family dashboard.{{/if}}
+
+Read it: {{url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

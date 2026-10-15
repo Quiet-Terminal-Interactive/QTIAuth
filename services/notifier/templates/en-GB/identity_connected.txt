@@ -1,0 +1,8 @@
+New sign-in method
+
+Hi {{name}}, you can now sign in with {{provider}}.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

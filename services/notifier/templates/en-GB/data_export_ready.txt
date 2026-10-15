@@ -1,0 +1,8 @@
+Your data export is ready
+
+Hi {{name}}, your copy of your data is ready to download. The link expires on {{expires_at}}.
+
+Download: {{download_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

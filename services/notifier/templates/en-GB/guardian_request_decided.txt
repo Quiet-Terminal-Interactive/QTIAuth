@@ -1,0 +1,6 @@
+Request {{#if approved}}approved{{else}}declined{{/if}}
+
+Hi {{name}}, your parent or guardian {{#if approved}}approved{{else}}declined{{/if}} your request.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

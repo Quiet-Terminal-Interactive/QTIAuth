@@ -1,0 +1,16 @@
+# Edge profile: automatic HTTPS in front of the gateway.
+# QTIAUTH_HOSTS is a space-separated list of every host in your surfaces config.
+{
+	email {$ACME_EMAIL}
+	servers {
+		trusted_proxies static private_ranges
+	}
+}
+
+{$QTIAUTH_HOSTS} {
+	encode zstd gzip
+	reverse_proxy gateway:8080 {
+		header_up X-Forwarded-For {remote_host}
+		header_up X-Client-Port {remote_port}
+	}
+}

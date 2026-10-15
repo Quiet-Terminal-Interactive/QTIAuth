@@ -1,0 +1,8 @@
+A request is waiting
+
+{{child_name}} is still waiting for an answer to their request.
+
+Review request: {{dashboard_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

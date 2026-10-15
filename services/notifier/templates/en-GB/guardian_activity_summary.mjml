@@ -1,0 +1,26 @@
+---
+subject: "{{child_name}}'s week on {{product_name}}"
+vars: [child_name, sign_in_count, games, apps, total_playtime_minutes, dashboard_url]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>{{child_name}}'s week on {{product_name}}</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">{{child_name}}'s week</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Sign-ins: <strong>{{sign_in_count}}</strong> &middot; Playtime: <strong>{{total_playtime_minutes}} minutes</strong></mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">{{#each games}}{{this.name}}: {{this.playtime_minutes}} min<br />{{/each}}</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">{{#if apps}}Apps connected: {{#each apps}}{{this.name}} {{/each}}{{/if}}</mj-text>
+        <mj-button href="{{dashboard_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">Open family dashboard</mj-button>
+        <mj-text color="{{colors.text_muted}}" font-size="13px" line-height="20px">We never show you what they say or create.</mj-text>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

@@ -1,0 +1,8 @@
+App approval needed
+
+{{child_name}} wants to connect {{client_name}} to their account.
+
+Review request: {{dashboard_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

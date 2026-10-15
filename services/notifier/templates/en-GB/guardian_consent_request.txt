@@ -1,0 +1,12 @@
+Your approval is needed
+
+{{child_name}} ({{child_email}}) wants to create a {{product_name}} account and gave your email as their parent or guardian.
+
+We collect their email, username and date of birth, sign-in and security information, and details of the games and apps they use. Read the plain-language summary or the full privacy policy.
+
+If you approve, you'll be able to manage their settings from a family dashboard. If you decline or don't respond by {{expires_at}}, the account and its data are deleted.
+
+Review and decide: {{consent_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

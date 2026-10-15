@@ -1,0 +1,64 @@
+groups:
+  - name: qtiauth
+    rules:
+      - alert: HighErrorRate
+        expr: sum(rate(qtiauth_gateway_requests_total{status=~"5.."}[5m])) / clamp_min(sum(rate(qtiauth_gateway_requests_total[5m])), 1) > 0.05
+        for: 5m
+        labels: { severity: critical }
+        annotations: { summary: "More than 5% of requests are failing with 5xx" }
+      - alert: AuthFailureSpike
+        expr: sum(rate(qtiauth_auth_sign_ins_total{result="failure"}[10m])) > 3 * sum(rate(qtiauth_auth_sign_ins_total{result="failure"}[6h] offset 10m)) and sum(rate(qtiauth_auth_sign_ins_total{result="failure"}[10m])) > 0.5
+        for: 10m
+        labels: { severity: warning }
+        annotations: { summary: "Sign-in failures are three times higher than usual (possible credential stuffing)" }
+      - alert: OutboxBacklogOld
+        expr: max(qtiauth_outbox_oldest_age_seconds) > 300
+        for: 5m
+        labels: { severity: critical }
+        annotations: { summary: "Outbox events have been waiting more than 5 minutes ({{ $labels.instance }})" }
+      - alert: ConsumerLag
+        expr: max by (consumer) (qtiauth_bus_consumer_pending) > 1000
+        for: 10m
+        labels: { severity: warning }
+        annotations: { summary: "Bus consumer {{ $labels.consumer }} is falling behind" }
+      - alert: WebhookEndpointDisabled
+        expr: increase(qtiauth_webhook_endpoints_disabled_total[15m]) > 0
+        labels: { severity: warning }
+        annotations: { summary: "A webhook endpoint was auto-disabled after repeated failures" }
+      - alert: SafetySlaBreaches
+        expr: increase(qtiauth_safety_sla_breaches_total[30m]) > 0
+        labels: { severity: warning }
+        annotations: { summary: "Reports breached their moderation SLA" }
+      - alert: CseaSubmissionOverdue
+        expr: qtiauth_safety_csea_submissions_overdue > 0
+        labels: { severity: critical }
+        annotations: { summary: "A CSEA case is past its NCA submission target" }
+      - alert: NcaRequestOverdue
+        expr: qtiauth_safety_csea_nca_requests_overdue > 0
+        labels: { severity: critical }
+        annotations: { summary: "An NCA request is past the seven-day legal deadline" }
+      - alert: BackupFailed
+        expr: increase(qtiauth_backup_runs_total{result="error"}[1d]) > 0
+        labels: { severity: critical }
+        annotations: { summary: "A backup run failed" }
+      - alert: BackupStale
+        expr: time() - max(qtiauth_backup_last_success_timestamp_seconds) > 2 * 86400
+        labels: { severity: critical }
+        annotations: { summary: "No successful backup in two days" }
+      - alert: KeyRotationOverdue
+        expr: max by (purpose) (qtiauth_signing_key_age_seconds) > 100 * 86400
+        labels: { severity: warning }
+        annotations: { summary: "The {{ $labels.purpose }} signing key is older than the rotation period" }
+      - alert: SchedulerStalled
+        expr: time() - max(qtiauth_scheduler_last_tick_timestamp_seconds) > 600
+        labels: { severity: critical }
+        annotations: { summary: "The scheduler hasn't published a tick for 10 minutes" }
+      - alert: RateLimiterFailingOpen
+        expr: increase(qtiauth_rate_limit_valkey_failures_total[5m]) > 10
+        labels: { severity: warning }
+        annotations: { summary: "Valkey errors are making rate limits fail open or closed" }
+      - alert: ServiceDown
+        expr: up == 0
+        for: 2m
+        labels: { severity: critical }
+        annotations: { summary: "{{ $labels.service }} ({{ $labels.instance }}) is not responding to scrapes" }

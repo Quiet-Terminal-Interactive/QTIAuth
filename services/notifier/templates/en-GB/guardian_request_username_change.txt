@@ -1,0 +1,8 @@
+Username change
+
+{{child_name}} wants to change their username to {{username}}.
+
+Review request: {{dashboard_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

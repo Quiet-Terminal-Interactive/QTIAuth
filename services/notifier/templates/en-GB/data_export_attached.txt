@@ -1,0 +1,6 @@
+Your data export
+
+Hi {{name}}, your copy of your data is attached to this email as a zip file.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

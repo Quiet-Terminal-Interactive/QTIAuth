@@ -1,0 +1,25 @@
+{
+  "name": "@qtiauth/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/service.tsx"
+  },
+  "scripts": {
+    "build": "node build.ts",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "@qtiauth/auth-context": "workspace:*",
+    "@qtiauth/common": "workspace:*",
+    "@qtiauth/config": "workspace:*",
+    "@qtiauth/service-kit": "workspace:*",
+    "hono": "^4.13.13",
+    "qrcode-generator": "^2.0.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

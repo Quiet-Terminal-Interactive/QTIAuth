@@ -1,0 +1,8 @@
+Recovery code used
+
+Hi {{name}}, a recovery code was just used to sign in. You have {{remaining}} left. Generate new ones in your security settings if you're running low.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

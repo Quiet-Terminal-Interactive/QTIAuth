@@ -1,0 +1,8 @@
+New ticket #{{number}}
+
+{{subject}}Category: {{category}} - Priority: {{priority}}
+
+Open ticket: {{ticket_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

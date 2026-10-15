@@ -1,0 +1,27 @@
+{
+  "name": "@qtiauth/cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "qtiauth": "src/main.ts"
+  },
+  "exports": {
+    ".": "./src/main.ts"
+  },
+  "dependencies": {
+    "@qtiauth/common": "workspace:*",
+    "@qtiauth/config": "workspace:*",
+    "@qtiauth/db": "workspace:*",
+    "@qtiauth/service-kit": "workspace:*",
+    "@qtiauth/identity": "workspace:*",
+    "@qtiauth/notifier": "workspace:*",
+    "@qtiauth/oidc": "workspace:*",
+    "@qtiauth/safety": "workspace:*",
+    "@qtiauth/support": "workspace:*",
+    "@qtiauth/games": "workspace:*",
+    "@qtiauth/scheduler": "workspace:*",
+    "@qtiauth/backup": "workspace:*",
+    "pg": "^8.16.3"
+  }
+}

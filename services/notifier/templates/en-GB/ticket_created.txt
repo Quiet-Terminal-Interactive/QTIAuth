@@ -1,0 +1,8 @@
+We got your request
+
+Hi {{name}}, thanks for getting in touch. Your ticket #{{number}} ({{subject}}) is with our team.
+
+View ticket: {{ticket_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

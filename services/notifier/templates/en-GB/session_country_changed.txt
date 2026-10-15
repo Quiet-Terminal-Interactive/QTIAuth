@@ -1,0 +1,8 @@
+Sign-in from another country
+
+Hi {{name}}, one of your sessions is now being used from {{country}}.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

@@ -1,0 +1,6 @@
+Guardian link removed
+
+You're no longer a guardian on {{child_name}}'s {{product_name}} account.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

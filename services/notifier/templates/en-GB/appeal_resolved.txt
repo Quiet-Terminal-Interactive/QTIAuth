@@ -1,0 +1,8 @@
+Your appeal was reviewed
+
+Hi {{name}}, we reviewed your appeal. Outcome: {{outcome}}.
+
+{{details}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

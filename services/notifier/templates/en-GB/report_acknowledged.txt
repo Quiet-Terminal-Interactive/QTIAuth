@@ -1,0 +1,6 @@
+Thanks for your report
+
+Hi {{name}}, we got your report (reference {{reference}}). We'll review it and let you know the outcome. The person you reported won't be told who reported them.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

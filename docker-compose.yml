@@ -1,0 +1,307 @@
+name: qtiauth
+
+x-service: &service
+  image: ${QTIAUTH_IMAGE:-qtiauth:latest}
+  build:
+    context: .
+    args:
+      QTIAUTH_VERSION: ${QTIAUTH_VERSION:-dev}
+  restart: unless-stopped
+  read_only: true
+  tmpfs: [ /tmp ]
+  security_opt: [ no-new-privileges:true ]
+  cap_drop: [ ALL ]
+  env_file: .env
+  volumes:
+    - ./config:/config:ro
+  networks: [ internal ]
+  depends_on:
+    postgres: { condition: service_healthy }
+    nats: { condition: service_started }
+    valkey: { condition: service_started }
+  healthcheck:
+    test: [ "CMD", "node", "-e", "fetch('http://127.0.0.1:3000/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))" ]
+    interval: 15s
+    timeout: 5s
+    retries: 5
+    start_period: 30s
+
+x-db: &db
+  POSTGRES_HOST: postgres
+
+services:
+  postgres:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: qtiauth
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      IDENTITY_DB_PASSWORD: ${IDENTITY_DB_PASSWORD}
+      NOTIFIER_DB_PASSWORD: ${NOTIFIER_DB_PASSWORD}
+      OIDC_DB_PASSWORD: ${OIDC_DB_PASSWORD}
+      SAFETY_DB_PASSWORD: ${SAFETY_DB_PASSWORD}
+      SUPPORT_DB_PASSWORD: ${SUPPORT_DB_PASSWORD}
+      GAMES_DB_PASSWORD: ${GAMES_DB_PASSWORD}
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./deploy/postgres/init-roles.sh:/docker-entrypoint-initdb.d/10-roles.sh:ro
+    networks: [ internal ]
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d qtiauth" ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  valkey:
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+    command: [ "valkey-server", "--save", "", "--appendonly", "no", "--maxmemory", "512mb", "--maxmemory-policy", "volatile-lru" ]
+    networks: [ internal ]
+
+  nats:
+    image: nats:2.11-alpine
+    restart: unless-stopped
+    command: [ "-c", "/etc/nats/nats.conf" ]
+    environment:
+      NATS_PASSWORD: ${NATS_PASSWORD:?set NATS_PASSWORD in .env}
+    volumes:
+      - nats:/data
+      - ./deploy/nats/nats.conf:/etc/nats/nats.conf:ro
+    networks: [ internal ]
+
+  gateway:
+    <<: *service
+    environment:
+      QTIAUTH_SERVICE: gateway
+    ports:
+      - "${HTTP_PORT:-8080}:8080"
+    volumes:
+      - ./config:/config:ro
+      - geoip:/var/lib/geoip:ro
+    networks: [ internal, public, egress ]
+    depends_on:
+      nats: { condition: service_started }
+      valkey: { condition: service_started }
+    healthcheck:
+      test: [ "CMD", "node", "-e", "fetch('http://127.0.0.1:8080/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))" ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  identity:
+    <<: *service
+    environment:
+      <<: *db
+      QTIAUTH_SERVICE: identity
+      DATABASE_URL: postgres://identity:${IDENTITY_DB_PASSWORD}@postgres:5432/qtiauth
+      AUDIT_DB_ROLE: qtiauth_audit
+    volumes:
+      - ./config:/config:ro
+      - backups:/backups
+    networks: [ internal, egress ]
+
+  notifier:
+    <<: *service
+    environment:
+      <<: *db
+      QTIAUTH_SERVICE: notifier
+      DATABASE_URL: postgres://notify:${NOTIFIER_DB_PASSWORD}@postgres:5432/qtiauth
+    networks: [ internal, egress ]
+
+  scheduler:
+    <<: *service
+    environment:
+      QTIAUTH_SERVICE: scheduler
+    depends_on:
+      nats: { condition: service_started }
+      valkey: { condition: service_started }
+
+  web:
+    <<: *service
+    environment:
+      QTIAUTH_SERVICE: web
+    depends_on:
+      nats: { condition: service_started }
+      valkey: { condition: service_started }
+
+  oidc:
+    <<: *service
+    profiles: [ oidc ]
+    environment:
+      <<: *db
+      QTIAUTH_SERVICE: oidc
+      DATABASE_URL: postgres://oidc:${OIDC_DB_PASSWORD}@postgres:5432/qtiauth
+    networks: [ internal, egress ]
+
+  safety:
+    <<: *service
+    profiles: [ safety ]
+    environment:
+      <<: *db
+      QTIAUTH_SERVICE: safety
+      DATABASE_URL: postgres://safety:${SAFETY_DB_PASSWORD}@postgres:5432/qtiauth
+
+  support:
+    <<: *service
+    profiles: [ support ]
+    environment:
+      <<: *db
+      QTIAUTH_SERVICE: support
+      DATABASE_URL: postgres://support:${SUPPORT_DB_PASSWORD}@postgres:5432/qtiauth
+
+  games:
+    <<: *service
+    profiles: [ games ]
+    environment:
+      <<: *db
+      QTIAUTH_SERVICE: games
+      DATABASE_URL: postgres://games:${GAMES_DB_PASSWORD}@postgres:5432/qtiauth
+    networks: [ internal, egress ]
+
+  storage:
+    image: chrislusf/seaweedfs:4.48
+    profiles: [ storage ]
+    restart: unless-stopped
+    environment:
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID:-qtiauth}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY:?set S3_SECRET_ACCESS_KEY in .env}
+    entrypoint: [ "/bin/sh", "-c" ]
+    command:
+      - |
+        printf '{"identities":[{"name":"qtiauth","credentials":[{"accessKey":"%s","secretKey":"%s"}],"actions":["Admin","Read","Write","List","Tagging"]}]}' "$$S3_ACCESS_KEY_ID" "$$S3_SECRET_ACCESS_KEY" > /tmp/s3.json
+        exec weed server -dir=/data -s3 -s3.port=8333 -s3.config=/tmp/s3.json -master.volumeSizeLimitMB=1024 -volume.max=0
+    volumes:
+      - storage:/data
+    networks: [ internal, public ]
+    ports:
+      - "${STORAGE_PORT:-8333}:8333"
+
+  geoip-updater:
+    image: alpine:3.22
+    profiles: [ geoip ]
+    restart: unless-stopped
+    command: [ "/bin/sh", "/update.sh" ]
+    environment:
+      GEOIP_SOURCE: ${GEOIP_SOURCE:-dbip_lite}
+      MAXMIND_LICENSE_KEY: ${MAXMIND_LICENSE_KEY:-}
+    volumes:
+      - geoip:/var/lib/geoip
+      - ./deploy/geoip/update.sh:/update.sh:ro
+    networks: [ egress ]
+
+  caddy:
+    image: caddy:2.10-alpine
+    profiles: [ edge ]
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      QTIAUTH_HOSTS: ${QTIAUTH_HOSTS:?set QTIAUTH_HOSTS for the edge profile}
+      ACME_EMAIL: ${ACME_EMAIL:-}
+    volumes:
+      - ./deploy/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks: [ public ]
+
+  backup:
+    <<: *service
+    profiles: [ backup ]
+    environment:
+      QTIAUTH_SERVICE: backup
+      BACKUP_DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@postgres:5432/qtiauth
+    volumes:
+      - ./config:/config:ro
+      - backups:/backups
+    networks: [ internal, egress ]
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    profiles: [ observability ]
+    restart: unless-stopped
+    entrypoint: [ "/bin/sh", "/etc/prometheus/start.sh" ]
+    env_file: .env
+    volumes:
+      - ./deploy/observability/prometheus:/etc/prometheus:ro
+      - prometheus:/prometheus
+    networks: [ internal ]
+
+  alertmanager:
+    image: prom/alertmanager:v0.28.1
+    profiles: [ observability ]
+    restart: unless-stopped
+    entrypoint: [ "/bin/sh", "/etc/alertmanager/start.sh" ]
+    env_file: .env
+    volumes:
+      - ./deploy/observability/alertmanager/start.sh:/etc/alertmanager/start.sh:ro
+      - alertmanager:/alertmanager
+    networks: [ internal, egress ]
+
+  tempo:
+    image: grafana/tempo:2.8.2
+    profiles: [ observability ]
+    restart: unless-stopped
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./deploy/observability/tempo.yaml:/etc/tempo.yaml:ro
+      - tempo:/var/tempo
+    networks: [ internal ]
+
+  loki:
+    image: grafana/loki:3.5.3
+    profiles: [ observability ]
+    restart: unless-stopped
+    command: [ "-config.file=/etc/loki/loki.yaml" ]
+    volumes:
+      - ./deploy/observability/loki.yaml:/etc/loki/loki.yaml:ro
+      - loki:/loki
+    networks: [ internal ]
+
+  alloy:
+    image: grafana/alloy:v1.10.2
+    profiles: [ observability ]
+    restart: unless-stopped
+    command: [ "run", "/etc/alloy/config.alloy" ]
+    volumes:
+      - ./deploy/observability/config.alloy:/etc/alloy/config.alloy:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks: [ internal ]
+
+  grafana:
+    image: grafana/grafana:12.1.1
+    profiles: [ observability ]
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?set GRAFANA_ADMIN_PASSWORD in .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    volumes:
+      - ./deploy/observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./deploy/observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana:/var/lib/grafana
+    ports:
+      - "127.0.0.1:${GRAFANA_PORT:-3001}:3000"
+    networks: [ internal, public ]
+
+networks:
+  internal:
+    internal: true
+  egress: {}
+  public: {}
+
+volumes:
+  postgres:
+  nats:
+  storage:
+  geoip:
+  backups:
+  caddy-data:
+  caddy-config:
+  prometheus:
+  alertmanager:
+  tempo:
+  loki:
+  grafana:

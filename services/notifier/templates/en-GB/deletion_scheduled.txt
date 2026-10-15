@@ -1,0 +1,8 @@
+Account deletion scheduled
+
+Hi {{name}}, your account is scheduled for deletion on {{due_at}}. We've signed you out everywhere.
+
+Changed your mind? Just sign in before then and the deletion is cancelled.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

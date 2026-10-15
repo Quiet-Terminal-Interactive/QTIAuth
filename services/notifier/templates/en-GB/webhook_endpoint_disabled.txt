@@ -1,0 +1,8 @@
+Webhook endpoint disabled
+
+The webhook endpoint {{url}} was disabled after {{failures}} failed deliveries in a row.
+
+Review endpoint: {{admin_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

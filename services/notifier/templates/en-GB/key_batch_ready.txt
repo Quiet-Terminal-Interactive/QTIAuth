@@ -1,0 +1,6 @@
+Key batch ready
+
+Hi {{name}}, the key batch {{label}} ({{count}} keys) was generated.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

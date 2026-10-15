@@ -1,0 +1,24 @@
+---
+subject: "Your {{product_name}} email address was changed"
+vars: [name, new_email, revert_url]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>Your {{product_name}} email address was changed</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">Your email address was changed</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Hi {{name}}, the email for your account was changed to <strong>{{new_email}}</strong>.</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">If this wasn't you, use the button below within 7 days to undo the change and secure your account.</mj-text>
+        <mj-button href="{{revert_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">This wasn't me</mj-button>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

@@ -1,0 +1,8 @@
+Happy birthday!
+
+Hi {{name}}, you've reached the age where you can manage your own account. Your guardian's controls stay in place until {{optional_at}}, then they become optional.
+
+Open settings: {{settings_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

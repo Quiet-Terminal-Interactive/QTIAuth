@@ -1,0 +1,8 @@
+We ended a session
+
+Hi {{name}}, we ended a session on your account because it looked suspicious.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

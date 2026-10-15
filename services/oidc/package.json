@@ -1,0 +1,20 @@
+{
+  "name": "@qtiauth/oidc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/service.ts" },
+  "scripts": { "start": "node src/main.ts" },
+  "dependencies": {
+    "@node-rs/argon2": "^2.0.2",
+    "@qtiauth/auth-context": "workspace:*",
+    "@qtiauth/bus": "workspace:*",
+    "@qtiauth/common": "workspace:*",
+    "@qtiauth/config": "workspace:*",
+    "@qtiauth/db": "workspace:*",
+    "@qtiauth/service-kit": "workspace:*",
+    "jose": "^6.2.12",
+    "kysely": "^0.28.8",
+    "zod": "^4.6.5"
+  }
+}

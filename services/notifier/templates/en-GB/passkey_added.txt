@@ -1,0 +1,8 @@
+Passkey added
+
+Hi {{name}}, a new passkey{{#if name}}{{/if}} was added to your account.
+
+If this wasn't you, reset your password and review your sessions straight away.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

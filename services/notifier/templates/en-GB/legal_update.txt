@@ -1,0 +1,10 @@
+We've updated our {{title}}
+
+Hi {{name}}, {{summary}}
+
+{{#if material}}You'll be asked to review and accept the changes next time you sign in.{{/if}}
+
+Read it: {{url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

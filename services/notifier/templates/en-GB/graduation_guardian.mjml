@@ -1,0 +1,23 @@
+---
+subject: "{{child_name}} can now manage their own account"
+vars: [child_name, optional_at]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>{{child_name}} can now manage their own account</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">{{child_name}} has grown up a bit</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">{{child_name}} has reached the age of digital consent. Your controls stay in place until {{optional_at}}, then they become optional. Removing the guardian link still needs your approval.</mj-text>
+
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

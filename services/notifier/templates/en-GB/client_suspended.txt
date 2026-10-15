@@ -1,0 +1,6 @@
+App suspended
+
+Hi {{name}}, your app {{client_name}} was suspended: {{reason}}. Existing tokens were revoked and new sign-ins are blocked.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

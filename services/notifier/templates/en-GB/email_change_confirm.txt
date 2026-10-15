@@ -1,0 +1,10 @@
+Confirm your new email
+
+Hi {{name}}, confirm this address to make it the email for your {{product_name}} account.
+
+Confirm new email: {{confirm_url}}
+
+If you didn't ask for this, you can ignore this email.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

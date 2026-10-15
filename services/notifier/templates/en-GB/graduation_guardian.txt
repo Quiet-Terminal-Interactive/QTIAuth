@@ -1,0 +1,6 @@
+{{child_name}} has grown up a bit
+
+{{child_name}} has reached the age of digital consent. Your controls stay in place until {{optional_at}}, then they become optional. Removing the guardian link still needs your approval.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

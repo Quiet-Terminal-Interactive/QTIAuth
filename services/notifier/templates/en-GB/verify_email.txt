@@ -1,0 +1,10 @@
+Confirm your email
+
+Hi {{name}}, confirm this address to finish setting up your {{product_name}} account.
+
+Confirm email: {{verify_url}}
+
+If you didn't ask for this, you can ignore this email.
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

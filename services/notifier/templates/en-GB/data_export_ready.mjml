@@ -1,0 +1,23 @@
+---
+subject: "Your data export is ready"
+vars: [name, download_url, expires_at]
+---
+<mjml>
+  <mj-head>
+    <mj-preview>Your data export is ready</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="{{colors.background}}" width="560px">
+    {{> header}}
+    <mj-section background-color="{{colors.surface}}" border-radius="14px" padding="28px 8px">
+      <mj-column>
+        <mj-text color="{{colors.text}}" font-size="22px" font-weight="700" line-height="30px">Your data export is ready</mj-text>
+        <mj-text color="{{colors.text}}" font-size="16px" line-height="24px">Hi {{name}}, your copy of your data is ready to download. The link expires on {{expires_at}}.</mj-text>
+        <mj-button href="{{download_url}}" background-color="{{colors.primary}}" color="{{colors.primary_text}}" font-weight="600" border-radius="8px" align="left" inner-padding="12px 22px">Download</mj-button>
+      </mj-column>
+    </mj-section>
+    {{> footer}}
+  </mj-body>
+</mjml>

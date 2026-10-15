@@ -1,0 +1,11 @@
+{
+  "name": "@qtiauth/common",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "pino": "^10.4.0",
+    "prom-client": "^15.1.3"
+  }
+}

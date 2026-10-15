@@ -1,0 +1,8 @@
+New app connected
+
+{{child_name}} connected {{client_name}} to their account. It can: {{scopes}}.
+
+Open family dashboard: {{dashboard_url}}
+
+-- 
+{{product_name}} · {{company_name}} · {{support_email}}

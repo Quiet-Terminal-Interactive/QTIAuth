@@ -1,0 +1,12 @@
+{
+  "name": "@qtiauth/auth-context",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@qtiauth/common": "workspace:*",
+    "@qtiauth/config": "workspace:*",
+    "jose": "^6.2.12"
+  }
+}

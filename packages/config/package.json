@@ -1,0 +1,12 @@
+{
+  "name": "@qtiauth/config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@qtiauth/common": "workspace:*",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  }
+}
