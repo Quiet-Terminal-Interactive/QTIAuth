@@ -188,7 +188,7 @@ export class Gateway {
       const listenPort = internal && req.headers.get(SURFACE_ORIGIN_HEADER) ? Number(new URL(req.headers.get(SURFACE_ORIGIN_HEADER)!).port || 0) : port;
       const candidates = this.surfacesFor(host, listenPort);
       if (!candidates.length) throw new ProblemError(404, "UNKNOWN_SURFACE");
-      const origin = req.headers.get("origin");
+      const origin = requestOrigin(req.headers);
       if (req.method === "OPTIONS" && origin) return this.preflight(origin, req);
       const match = this.resolve(req.method === "HEAD" ? "GET" : req.method, url.pathname, candidates);
       if (!match) throw new ProblemError(404, "ROUTE_NOT_FOUND");
@@ -250,7 +250,7 @@ export class Gateway {
   }
 
   private corsHeaders(ctx: Ctx, h: Headers): void {
-    const origin = ctx.req.headers.get("origin");
+    const origin = requestOrigin(ctx.req.headers);
     if (!origin) return;
     if (this.credentialedOrigins.has(origin)) {
       h.set("access-control-allow-origin", origin);
@@ -464,7 +464,7 @@ export class Gateway {
 
   private checkOrigin(ctx: Ctx, usesSession: boolean, hasCookie: boolean): void {
     if (ctx.internal || !UNSAFE.has(ctx.req.method) || !usesSession) return;
-    const origin = ctx.req.headers.get("origin") ?? refererOrigin(ctx.req.headers.get("referer"));
+    const origin = requestOrigin(ctx.req.headers) ?? refererOrigin(ctx.req.headers.get("referer"));
     if (origin) {
       if (!this.credentialedOrigins.has(origin)) throw new ProblemError(403, "CSRF_ORIGIN_MISMATCH");
       return;
@@ -804,6 +804,13 @@ function redirect(location: string): Response {
 function safePath(p: string | null): string {
   if (!p || !p.startsWith("/") || p.startsWith("//") || p.includes("\\")) return "/";
   return p.slice(0, 1024);
+}
+
+function requestOrigin(h: Headers): string | null {
+  const raw = h.get("origin");
+  if (!raw || !raw.includes(",")) return raw;
+  const parts = raw.split(",").map((p) => p.trim());
+  return new Set(parts).size === 1 ? parts[0]! : raw;
 }
 
 function refererOrigin(ref: string | null): string | null {
