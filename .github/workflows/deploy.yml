@@ -1,0 +1,63 @@
+# qtidocs deploy trigger — add this file to .github/workflows/ in the repo you registered (the one with your qtidocs/ folder), unmodified except for the branch below. It reads the QTIDOCS_DEPLOY_SECRET repo secret, which is emailed to your registry entry's contact address at registration time.
+#
+# This is the whole of how qtidocs finds out your repo changed: The platform never installs a webhook or GitHub App on your repo. Instead, your own repo calls qtidocs on every push to the branch you registered, and on every pull_request event, authenticated with a per-site deploy secret scoped to your subdomain alone.
+#
+# The pull_request triggers build a short-lived preview of the PR's own qtidocs/ folder at pr-<number>.<your-subdomain>.qtidocs.dev, rebuilt on every new commit pushed to the PR, and torn down the moment the PR is closed (merged or not).
+name: qtidocs deploy
+
+on:
+  push:
+    branches:
+      # Keep this in sync with the `branch` field of your registry entry (sites/<subdomain>.yaml at github.com/quiet-terminal-interactive/qtidocs).
+      - main
+  pull_request:
+    types: [opened, synchronize, closed]
+
+jobs:
+  notify-qtidocs:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify qtidocs of new commit
+        env:
+          QTIDOCS_DEPLOY_SECRET: ${{ secrets.QTIDOCS_DEPLOY_SECRET }}
+        run: |
+          body="{\"repo\":\"${{ github.repository }}\",\"ref\":\"${{ github.sha }}\"}"
+          signature="sha256=$(printf '%s' "$body" | openssl dgst -sha256 -hmac "$QTIDOCS_DEPLOY_SECRET" | sed 's/^.* //')"
+          curl --fail --silent --show-error \
+            -X POST "https://api.qtidocs.dev/deploy" \
+            -H "X-QTIDocs-Signature-256: $signature" \
+            -H "Content-Type: application/json" \
+            -d "$body"
+
+  notify-qtidocs-preview-deploy:
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify qtidocs of PR preview
+        env:
+          QTIDOCS_DEPLOY_SECRET: ${{ secrets.QTIDOCS_DEPLOY_SECRET }}
+        run: |
+          body="{\"repo\":\"${{ github.repository }}\",\"pr\":${{ github.event.pull_request.number }},\"ref\":\"${{ github.event.pull_request.head.sha }}\"}"
+          signature="sha256=$(printf '%s' "$body" | openssl dgst -sha256 -hmac "$QTIDOCS_DEPLOY_SECRET" | sed 's/^.* //')"
+          curl --fail --silent --show-error \
+            -X POST "https://api.qtidocs.dev/preview/deploy" \
+            -H "X-QTIDocs-Signature-256: $signature" \
+            -H "Content-Type: application/json" \
+            -d "$body"
+
+  notify-qtidocs-preview-teardown:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tear down PR preview
+        env:
+          QTIDOCS_DEPLOY_SECRET: ${{ secrets.QTIDOCS_DEPLOY_SECRET }}
+        run: |
+          body="{\"repo\":\"${{ github.repository }}\",\"pr\":${{ github.event.pull_request.number }}}"
+          signature="sha256=$(printf '%s' "$body" | openssl dgst -sha256 -hmac "$QTIDOCS_DEPLOY_SECRET" | sed 's/^.* //')"
+          curl --fail --silent --show-error \
+            -X POST "https://api.qtidocs.dev/preview/teardown" \
+            -H "X-QTIDocs-Signature-256: $signature" \
+            -H "Content-Type: application/json" \
+            -d "$body"
