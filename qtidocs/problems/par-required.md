@@ -2,6 +2,7 @@
 title: PAR_REQUIRED
 description: This client requires Pushed Authorization Requests; a direct `/authorize` call is not accepted.
 order: 15
+nav: false
 ---
 
 # PAR_REQUIRED

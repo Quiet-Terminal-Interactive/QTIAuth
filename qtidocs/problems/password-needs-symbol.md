@@ -2,6 +2,7 @@
 title: PASSWORD_NEEDS_SYMBOL
 description: The password must contain at least one symbol character.
 order: 223
+nav: false
 ---
 
 # PASSWORD_NEEDS_SYMBOL

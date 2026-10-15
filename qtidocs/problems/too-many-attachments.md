@@ -2,6 +2,7 @@
 title: TOO_MANY_ATTACHMENTS
 description: The maximum number of pending attachments per message has been reached.
 order: 179
+nav: false
 ---
 
 # TOO_MANY_ATTACHMENTS

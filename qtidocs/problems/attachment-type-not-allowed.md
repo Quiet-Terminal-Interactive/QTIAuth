@@ -2,6 +2,7 @@
 title: ATTACHMENT_TYPE_NOT_ALLOWED
 description: The attachment MIME type is not in the allowed list.
 order: 190
+nav: false
 ---
 
 # ATTACHMENT_TYPE_NOT_ALLOWED

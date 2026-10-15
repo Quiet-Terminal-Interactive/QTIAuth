@@ -2,6 +2,7 @@
 title: AGE_NOT_ALLOWED
 description: The date of birth is below the minimum sign-up age.
 order: 193
+nav: false
 ---
 
 # AGE_NOT_ALLOWED

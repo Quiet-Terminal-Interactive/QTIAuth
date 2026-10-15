@@ -2,6 +2,7 @@
 title: GUEST_TICKETS_DISABLED
 description: Guest support tickets are disabled in configuration.
 order: 99
+nav: false
 ---
 
 # GUEST_TICKETS_DISABLED

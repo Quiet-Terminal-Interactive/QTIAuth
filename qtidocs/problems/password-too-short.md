@@ -2,6 +2,7 @@
 title: PASSWORD_TOO_SHORT
 description: The password is below the minimum configured length.
 order: 226
+nav: false
 ---
 
 # PASSWORD_TOO_SHORT

@@ -2,6 +2,7 @@
 title: PROVIDER_HAS_NO_CALLBACK
 description: The age assurance provider has no callback URL configured.
 order: 17
+nav: false
 ---
 
 # PROVIDER_HAS_NO_CALLBACK

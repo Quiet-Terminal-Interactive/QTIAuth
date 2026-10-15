@@ -2,6 +2,7 @@
 title: KEY_EXPIRED
 description: The redemption key has passed its expiry date.
 order: 11
+nav: false
 ---
 
 # KEY_EXPIRED

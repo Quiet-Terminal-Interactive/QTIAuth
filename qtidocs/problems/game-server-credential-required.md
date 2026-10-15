@@ -2,6 +2,7 @@
 title: GAME_SERVER_CREDENTIAL_REQUIRED
 description: The route requires game-server credentials.
 order: 27
+nav: false
 ---
 
 # GAME_SERVER_CREDENTIAL_REQUIRED

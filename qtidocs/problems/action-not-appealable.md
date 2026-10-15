@@ -2,6 +2,7 @@
 title: ACTION_NOT_APPEALABLE
 description: The moderation action cannot be appealed because it is rejected or pending approval.
 order: 139
+nav: false
 ---
 
 # ACTION_NOT_APPEALABLE

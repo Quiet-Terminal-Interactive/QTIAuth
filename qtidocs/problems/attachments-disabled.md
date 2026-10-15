@@ -2,6 +2,7 @@
 title: ATTACHMENTS_DISABLED
 description: Ticket attachments are disabled in configuration.
 order: 82
+nav: false
 ---
 
 # ATTACHMENTS_DISABLED

@@ -2,6 +2,7 @@
 title: KEY_INVALID
 description: The redemption key does not exist or is otherwise not valid.
 order: 12
+nav: false
 ---
 
 # KEY_INVALID

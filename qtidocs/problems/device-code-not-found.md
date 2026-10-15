@@ -2,6 +2,7 @@
 title: DEVICE_CODE_NOT_FOUND
 description: The device authorization code is invalid or has expired.
 order: 91
+nav: false
 ---
 
 # DEVICE_CODE_NOT_FOUND

@@ -2,6 +2,7 @@
 title: UNSUPPORTED_LOCALE
 description: The locale is not in the supported locales list.
 order: 242
+nav: false
 ---
 
 # UNSUPPORTED_LOCALE

@@ -2,6 +2,7 @@
 title: LAST_GUARDIAN
 description: Cannot remove the only remaining guardian on an account.
 order: 159
+nav: false
 ---
 
 # LAST_GUARDIAN

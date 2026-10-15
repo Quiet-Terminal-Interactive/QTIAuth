@@ -2,6 +2,7 @@
 title: GUARDIAN_MUST_ACCEPT
 description: The guardian has not yet accepted their guardian role.
 order: 60
+nav: false
 ---
 
 # GUARDIAN_MUST_ACCEPT

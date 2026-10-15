@@ -2,6 +2,7 @@
 title: ENCRYPTION_KEY_MISSING
 description: APP_ENCRYPTION_KEY is not configured; encrypted operations cannot proceed.
 order: 263
+nav: false
 ---
 
 # ENCRYPTION_KEY_MISSING

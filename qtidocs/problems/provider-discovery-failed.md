@@ -2,6 +2,7 @@
 title: PROVIDER_DISCOVERY_FAILED
 description: The OAuth provider OIDC discovery endpoint failed.
 order: 253
+nav: false
 ---
 
 # PROVIDER_DISCOVERY_FAILED

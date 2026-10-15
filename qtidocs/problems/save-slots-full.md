@@ -2,6 +2,7 @@
 title: SAVE_SLOTS_FULL
 description: All cloud save slots are full.
 order: 172
+nav: false
 ---
 
 # SAVE_SLOTS_FULL

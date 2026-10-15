@@ -2,6 +2,7 @@
 title: GONE
 description: The requested resource no longer exists and will not return.
 order: 183
+nav: false
 ---
 
 # GONE

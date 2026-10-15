@@ -2,6 +2,7 @@
 title: APPEAL_CATEGORY_REQUIRED
 description: Restricted accounts may only open appeal tickets, not general enquiries.
 order: 48
+nav: false
 ---
 
 # APPEAL_CATEGORY_REQUIRED

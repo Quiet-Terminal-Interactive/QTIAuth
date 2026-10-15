@@ -2,6 +2,7 @@
 title: INVALID_DELEGATION
 description: The delegation token is missing or invalid.
 order: 30
+nav: false
 ---
 
 # INVALID_DELEGATION

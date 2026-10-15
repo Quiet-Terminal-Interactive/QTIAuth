@@ -2,6 +2,7 @@
 title: UNKNOWN_REPORT_TYPE
 description: The report type is not recognized.
 order: 238
+nav: false
 ---
 
 # UNKNOWN_REPORT_TYPE

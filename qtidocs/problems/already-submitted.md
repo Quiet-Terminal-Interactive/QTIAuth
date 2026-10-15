@@ -2,6 +2,7 @@
 title: ALREADY_SUBMITTED
 description: The CSEA report has already been submitted and the case is no longer open.
 order: 143
+nav: false
 ---
 
 # ALREADY_SUBMITTED

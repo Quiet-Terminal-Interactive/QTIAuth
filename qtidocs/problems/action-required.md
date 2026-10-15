@@ -2,6 +2,7 @@
 title: ACTION_REQUIRED
 description: A moderation action must be selected when creating an appeal ticket.
 order: 192
+nav: false
 ---
 
 # ACTION_REQUIRED

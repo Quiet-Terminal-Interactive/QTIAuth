@@ -2,6 +2,7 @@
 title: REDIRECT_URI_REQUIRED
 description: redirect_uri is required but was not provided.
 order: 20
+nav: false
 ---
 
 # REDIRECT_URI_REQUIRED

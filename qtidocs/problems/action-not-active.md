@@ -2,6 +2,7 @@
 title: ACTION_NOT_ACTIVE
 description: The moderation action is not in an active or pending approval state.
 order: 138
+nav: false
 ---
 
 # ACTION_NOT_ACTIVE

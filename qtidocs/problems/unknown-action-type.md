@@ -2,6 +2,7 @@
 title: UNKNOWN_ACTION_TYPE
 description: The moderation action type is not recognized.
 order: 235
+nav: false
 ---
 
 # UNKNOWN_ACTION_TYPE

@@ -2,6 +2,7 @@
 title: SLUG_TAKEN
 description: The game slug or knowledge base article slug is already taken.
 order: 174
+nav: false
 ---
 
 # SLUG_TAKEN

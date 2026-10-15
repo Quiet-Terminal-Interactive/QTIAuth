@@ -2,6 +2,7 @@
 title: CANNOT_RETIRE_BASE
 description: The base product of a game cannot be retired.
 order: 149
+nav: false
 ---
 
 # CANNOT_RETIRE_BASE

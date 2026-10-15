@@ -2,6 +2,7 @@
 title: ACCOUNT_PENDING_DELETION
 description: The account is scheduled for deletion.
 order: 46
+nav: false
 ---
 
 # ACCOUNT_PENDING_DELETION

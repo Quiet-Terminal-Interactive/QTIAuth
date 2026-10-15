@@ -2,6 +2,7 @@
 title: INVALID_OR_EXPIRED_TOKEN
 description: An email verification token, magic link, or guardian invitation token is invalid or has expired.
 order: 8
+nav: false
 ---
 
 # INVALID_OR_EXPIRED_TOKEN

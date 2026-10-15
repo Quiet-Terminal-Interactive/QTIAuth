@@ -2,6 +2,7 @@
 title: STEAM_DISABLED
 description: Steam integration is disabled in configuration.
 order: 129
+nav: false
 ---
 
 # STEAM_DISABLED

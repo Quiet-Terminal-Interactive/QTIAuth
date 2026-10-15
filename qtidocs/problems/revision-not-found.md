@@ -2,6 +2,7 @@
 title: REVISION_NOT_FOUND
 description: The knowledge base article revision was not found.
 order: 120
+nav: false
 ---
 
 # REVISION_NOT_FOUND

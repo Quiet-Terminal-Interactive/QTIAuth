@@ -2,6 +2,7 @@
 title: STAT_NOT_FOUND
 description: The player stat was not found.
 order: 126
+nav: false
 ---
 
 # STAT_NOT_FOUND

@@ -2,6 +2,7 @@
 title: ROUTE_NOT_FOUND
 description: The API endpoint does not exist.
 order: 122
+nav: false
 ---
 
 # ROUTE_NOT_FOUND

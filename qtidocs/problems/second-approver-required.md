@@ -2,6 +2,7 @@
 title: SECOND_APPROVER_REQUIRED
 description: A different moderator must approve a permanent ban action.
 order: 68
+nav: false
 ---
 
 # SECOND_APPROVER_REQUIRED

@@ -2,6 +2,7 @@
 title: REMOVAL_REQUEST_NOT_FOUND
 description: The entitlement removal request was not found.
 order: 117
+nav: false
 ---
 
 # REMOVAL_REQUEST_NOT_FOUND

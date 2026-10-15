@@ -2,6 +2,7 @@
 title: MFA_ENROLMENT_REQUIRED
 description: MFA enrolment is required before the user can proceed.
 order: 63
+nav: false
 ---
 
 # MFA_ENROLMENT_REQUIRED

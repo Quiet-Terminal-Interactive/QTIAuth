@@ -2,6 +2,7 @@
 title: MAINTENANCE
 description: The server is in maintenance mode.
 order: 265
+nav: false
 ---
 
 # MAINTENANCE

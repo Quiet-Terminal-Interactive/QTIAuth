@@ -2,6 +2,7 @@
 title: UNKNOWN_RULE
 description: The safety rule identifier is not in the configured rules list.
 order: 240
+nav: false
 ---
 
 # UNKNOWN_RULE

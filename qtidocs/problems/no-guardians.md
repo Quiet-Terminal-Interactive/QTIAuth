@@ -2,6 +2,7 @@
 title: NO_GUARDIANS
 description: The user has no active guardians.
 order: 110
+nav: false
 ---
 
 # NO_GUARDIANS

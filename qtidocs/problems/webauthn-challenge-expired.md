@@ -2,6 +2,7 @@
 title: WEBAUTHN_CHALLENGE_EXPIRED
 description: The WebAuthn challenge has expired, or does not match the expected purpose or user.
 order: 25
+nav: false
 ---
 
 # WEBAUTHN_CHALLENGE_EXPIRED

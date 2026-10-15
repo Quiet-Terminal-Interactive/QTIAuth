@@ -2,6 +2,7 @@
 title: IMAGE_TOO_LARGE
 description: The knowledge base image exceeds the configured maximum size.
 order: 186
+nav: false
 ---
 
 # IMAGE_TOO_LARGE

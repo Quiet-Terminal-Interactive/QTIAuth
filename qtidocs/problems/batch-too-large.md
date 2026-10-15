@@ -2,6 +2,7 @@
 title: BATCH_TOO_LARGE
 description: The key batch count exceeds the configured maximum.
 order: 196
+nav: false
 ---
 
 # BATCH_TOO_LARGE

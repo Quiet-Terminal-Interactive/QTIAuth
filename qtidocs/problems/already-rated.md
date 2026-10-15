@@ -2,6 +2,7 @@
 title: ALREADY_RATED
 description: The support ticket has already been rated by this user.
 order: 142
+nav: false
 ---
 
 # ALREADY_RATED

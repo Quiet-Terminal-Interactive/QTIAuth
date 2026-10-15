@@ -2,6 +2,7 @@
 title: USERNAME_CHANGE_RESTRICTED
 description: Username changes are restricted on this account.
 order: 72
+nav: false
 ---
 
 # USERNAME_CHANGE_RESTRICTED

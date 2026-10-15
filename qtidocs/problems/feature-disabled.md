@@ -2,6 +2,7 @@
 title: FEATURE_DISABLED
 description: The requested feature is disabled in configuration.
 order: 96
+nav: false
 ---
 
 # FEATURE_DISABLED

@@ -2,6 +2,7 @@
 title: MAX_GUARDIANS_REACHED
 description: The account already has the maximum number of guardians.
 order: 162
+nav: false
 ---
 
 # MAX_GUARDIANS_REACHED

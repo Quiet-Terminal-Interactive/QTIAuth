@@ -2,6 +2,7 @@
 title: GUARDIAN_EMAIL_REQUIRED
 description: A guardian email address is required when signing up as a minor.
 order: 205
+nav: false
 ---
 
 # GUARDIAN_EMAIL_REQUIRED

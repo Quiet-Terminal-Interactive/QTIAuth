@@ -2,6 +2,7 @@
 title: REAUTHENTICATION_REQUIRED
 description: The session AAL is 0; the user must re-authenticate before proceeding.
 order: 67
+nav: false
 ---
 
 # REAUTHENTICATION_REQUIRED

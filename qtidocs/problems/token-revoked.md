@@ -2,6 +2,7 @@
 title: TOKEN_REVOKED
 description: The bearer token has been explicitly revoked and can no longer be used.
 order: 41
+nav: false
 ---
 
 # TOKEN_REVOKED

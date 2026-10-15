@@ -2,6 +2,7 @@
 title: INVALID_REDIRECT_URI
 description: The OAuth redirect URI format is invalid.
 order: 208
+nav: false
 ---
 
 # INVALID_REDIRECT_URI

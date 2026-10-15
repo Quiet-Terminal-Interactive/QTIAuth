@@ -2,6 +2,7 @@
 title: STEAM_APP_NOT_CONFIGURED
 description: No Steam App ID is configured for this game.
 order: 128
+nav: false
 ---
 
 # STEAM_APP_NOT_CONFIGURED

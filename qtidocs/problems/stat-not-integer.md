@@ -2,6 +2,7 @@
 title: STAT_NOT_INTEGER
 description: The stat value must be an integer for integer-type stats.
 order: 232
+nav: false
 ---
 
 # STAT_NOT_INTEGER

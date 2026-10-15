@@ -2,6 +2,7 @@
 title: CAPTCHA_REQUIRED
 description: A CAPTCHA must be solved before this request can proceed.
 order: 272
+nav: false
 ---
 
 # CAPTCHA_REQUIRED

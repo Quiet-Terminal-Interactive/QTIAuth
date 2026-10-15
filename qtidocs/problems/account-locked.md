@@ -2,6 +2,7 @@
 title: ACCOUNT_LOCKED
 description: The account is locked and cannot perform this action.
 order: 45
+nav: false
 ---
 
 # ACCOUNT_LOCKED

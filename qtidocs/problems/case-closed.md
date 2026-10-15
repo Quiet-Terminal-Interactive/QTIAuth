@@ -2,6 +2,7 @@
 title: CASE_CLOSED
 description: The CSEA case is already closed.
 order: 150
+nav: false
 ---
 
 # CASE_CLOSED

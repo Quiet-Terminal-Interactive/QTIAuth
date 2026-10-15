@@ -2,6 +2,7 @@
 title: DURATION_REQUIRED
 description: A duration is required for timed moderation action types.
 order: 202
+nav: false
 ---
 
 # DURATION_REQUIRED

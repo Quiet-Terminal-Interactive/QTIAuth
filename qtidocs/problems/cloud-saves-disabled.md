@@ -2,6 +2,7 @@
 title: CLOUD_SAVES_DISABLED
 description: Cloud saves are disabled in configuration.
 order: 89
+nav: false
 ---
 
 # CLOUD_SAVES_DISABLED

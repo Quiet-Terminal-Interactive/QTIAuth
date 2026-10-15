@@ -2,6 +2,7 @@
 title: GUARDIAN_MUST_BE_ADULT
 description: Only adults can accept a guardian role.
 order: 207
+nav: false
 ---
 
 # GUARDIAN_MUST_BE_ADULT

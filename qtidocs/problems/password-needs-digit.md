@@ -2,6 +2,7 @@
 title: PASSWORD_NEEDS_DIGIT
 description: The password must contain at least one digit.
 order: 221
+nav: false
 ---
 
 # PASSWORD_NEEDS_DIGIT

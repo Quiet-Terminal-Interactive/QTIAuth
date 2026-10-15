@@ -2,6 +2,7 @@
 title: SERVICE_TIMEOUT
 description: An internal service call via NATS timed out.
 order: 271
+nav: false
 ---
 
 # SERVICE_TIMEOUT

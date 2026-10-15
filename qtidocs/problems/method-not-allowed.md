@@ -2,6 +2,7 @@
 title: METHOD_NOT_ALLOWED
 description: The HTTP method used is not allowed on this endpoint.
 order: 136
+nav: false
 ---
 
 # METHOD_NOT_ALLOWED

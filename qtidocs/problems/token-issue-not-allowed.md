@@ -2,6 +2,7 @@
 title: TOKEN_ISSUE_NOT_ALLOWED
 description: Token issuance is not allowed for this Steam app configuration.
 order: 70
+nav: false
 ---
 
 # TOKEN_ISSUE_NOT_ALLOWED

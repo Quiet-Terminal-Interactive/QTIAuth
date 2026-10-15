@@ -2,6 +2,7 @@
 title: GUARDIAN_APPROVAL_REQUIRED
 description: Parent or guardian approval is required before this action can proceed.
 order: 58
+nav: false
 ---
 
 # GUARDIAN_APPROVAL_REQUIRED

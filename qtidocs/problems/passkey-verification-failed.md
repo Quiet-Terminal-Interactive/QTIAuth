@@ -2,6 +2,7 @@
 title: PASSKEY_VERIFICATION_FAILED
 description: Passkey authentication cryptographic verification failed.
 order: 37
+nav: false
 ---
 
 # PASSKEY_VERIFICATION_FAILED

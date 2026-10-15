@@ -2,6 +2,7 @@
 title: KEY_ALREADY_REDEEMED
 description: The redemption key has already been redeemed by this user.
 order: 157
+nav: false
 ---
 
 # KEY_ALREADY_REDEEMED

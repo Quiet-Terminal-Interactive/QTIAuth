@@ -2,6 +2,7 @@
 title: CHILD_ACCOUNTS_CANNOT_CREATE_CLIENTS
 description: Child (under-13) accounts cannot create OAuth applications.
 order: 51
+nav: false
 ---
 
 # CHILD_ACCOUNTS_CANNOT_CREATE_CLIENTS

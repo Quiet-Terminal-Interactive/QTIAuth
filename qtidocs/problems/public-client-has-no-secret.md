@@ -2,6 +2,7 @@
 title: PUBLIC_CLIENT_HAS_NO_SECRET
 description: Public OAuth clients cannot have a client secret.
 order: 168
+nav: false
 ---
 
 # PUBLIC_CLIENT_HAS_NO_SECRET

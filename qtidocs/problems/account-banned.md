@@ -2,6 +2,7 @@
 title: ACCOUNT_BANNED
 description: The account is suspended or banned and cannot perform this action.
 order: 44
+nav: false
 ---
 
 # ACCOUNT_BANNED

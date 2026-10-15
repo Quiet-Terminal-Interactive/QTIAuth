@@ -2,6 +2,7 @@
 title: LAST_SIGN_IN_METHOD
 description: Cannot remove the last available sign-in method.
 order: 160
+nav: false
 ---
 
 # LAST_SIGN_IN_METHOD

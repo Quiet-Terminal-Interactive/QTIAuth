@@ -2,6 +2,7 @@
 title: STAT_DELTA_TOO_LARGE
 description: The stat delta value exceeds the configured maximum.
 order: 231
+nav: false
 ---
 
 # STAT_DELTA_TOO_LARGE

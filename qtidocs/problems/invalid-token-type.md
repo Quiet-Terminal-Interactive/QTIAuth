@@ -2,6 +2,7 @@
 title: INVALID_TOKEN_TYPE
 description: The bearer token is not an access token, its `typ` claim is not `at+jwt`.
 order: 33
+nav: false
 ---
 
 # INVALID_TOKEN_TYPE

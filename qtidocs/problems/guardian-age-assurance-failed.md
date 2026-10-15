@@ -2,6 +2,7 @@
 title: GUARDIAN_AGE_ASSURANCE_FAILED
 description: The guardian failed the age assurance check and is not verified as an adult.
 order: 57
+nav: false
 ---
 
 # GUARDIAN_AGE_ASSURANCE_FAILED

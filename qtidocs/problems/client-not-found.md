@@ -2,6 +2,7 @@
 title: CLIENT_NOT_FOUND
 description: The OAuth client was not found.
 order: 88
+nav: false
 ---
 
 # CLIENT_NOT_FOUND

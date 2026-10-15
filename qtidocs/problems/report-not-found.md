@@ -2,6 +2,7 @@
 title: REPORT_NOT_FOUND
 description: The safety report was not found.
 order: 118
+nav: false
 ---
 
 # REPORT_NOT_FOUND

@@ -2,6 +2,7 @@
 title: APPEAL_NOT_FOUND
 description: The safety appeal was not found.
 order: 79
+nav: false
 ---
 
 # APPEAL_NOT_FOUND

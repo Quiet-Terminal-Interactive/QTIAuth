@@ -2,6 +2,7 @@
 title: SAVE_NOT_FOUND
 description: The cloud save slot was not found.
 order: 123
+nav: false
 ---
 
 # SAVE_NOT_FOUND

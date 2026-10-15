@@ -2,6 +2,7 @@
 title: EMAIL_UNCHANGED
 description: The new email address is the same as the current one.
 order: 204
+nav: false
 ---
 
 # EMAIL_UNCHANGED

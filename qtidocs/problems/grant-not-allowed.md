@@ -2,6 +2,7 @@
 title: GRANT_NOT_ALLOWED
 description: The client does not support the `authorization_code` grant type.
 order: 4
+nav: false
 ---
 
 # GRANT_NOT_ALLOWED

@@ -2,6 +2,7 @@
 title: BOOTSTRAP_EMAIL_MISMATCH
 description: The email address does not match the bootstrap invitation token.
 order: 197
+nav: false
 ---
 
 # BOOTSTRAP_EMAIL_MISMATCH

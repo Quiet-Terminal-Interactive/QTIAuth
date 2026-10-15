@@ -2,6 +2,7 @@
 title: TOO_YOUNG_TO_REQUEST_REMOVAL
 description: The user is below the consent age and cannot request guardian removal.
 order: 71
+nav: false
 ---
 
 # TOO_YOUNG_TO_REQUEST_REMOVAL

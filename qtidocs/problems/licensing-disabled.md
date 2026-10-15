@@ -2,6 +2,7 @@
 title: LICENSING_DISABLED
 description: The licensing feature is disabled in configuration.
 order: 108
+nav: false
 ---
 
 # LICENSING_DISABLED

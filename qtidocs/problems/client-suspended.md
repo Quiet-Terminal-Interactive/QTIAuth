@@ -2,6 +2,7 @@
 title: CLIENT_SUSPENDED
 description: The OAuth client (application) has been suspended and cannot be used.
 order: 3
+nav: false
 ---
 
 # CLIENT_SUSPENDED

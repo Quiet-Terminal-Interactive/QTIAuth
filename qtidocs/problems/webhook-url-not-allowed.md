@@ -2,6 +2,7 @@
 title: WEBHOOK_URL_NOT_ALLOWED
 description: The webhook URL resolves to a private or internal IP address.
 order: 245
+nav: false
 ---
 
 # WEBHOOK_URL_NOT_ALLOWED

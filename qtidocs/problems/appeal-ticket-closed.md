@@ -2,6 +2,7 @@
 title: APPEAL_TICKET_CLOSED
 description: The appeal support ticket is closed; a new appeal must be opened.
 order: 146
+nav: false
 ---
 
 # APPEAL_TICKET_CLOSED

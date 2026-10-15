@@ -2,6 +2,7 @@
 title: ACCOUNT_UNAVAILABLE
 description: The account is in a state that does not allow this operation.
 order: 47
+nav: false
 ---
 
 # ACCOUNT_UNAVAILABLE

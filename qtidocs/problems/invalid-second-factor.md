@@ -2,6 +2,7 @@
 title: INVALID_SECOND_FACTOR
 description: The second-factor code (TOTP or passkey) is incorrect.
 order: 32
+nav: false
 ---
 
 # INVALID_SECOND_FACTOR

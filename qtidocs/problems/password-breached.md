@@ -2,6 +2,7 @@
 title: PASSWORD_BREACHED
 description: The password appears in a known data breach dataset.
 order: 218
+nav: false
 ---
 
 # PASSWORD_BREACHED

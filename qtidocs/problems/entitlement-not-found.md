@@ -2,6 +2,7 @@
 title: ENTITLEMENT_NOT_FOUND
 description: The entitlement was not found.
 order: 94
+nav: false
 ---
 
 # ENTITLEMENT_NOT_FOUND

@@ -2,6 +2,7 @@
 title: LEADERBOARD_NOT_FOUND
 description: The leaderboard was not found.
 order: 106
+nav: false
 ---
 
 # LEADERBOARD_NOT_FOUND

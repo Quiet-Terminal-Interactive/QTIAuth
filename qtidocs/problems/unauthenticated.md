@@ -2,6 +2,7 @@
 title: UNAUTHENTICATED
 description: No valid session or bearer token was found.
 order: 42
+nav: false
 ---
 
 # UNAUTHENTICATED

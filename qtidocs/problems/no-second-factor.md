@@ -2,6 +2,7 @@
 title: NO_SECOND_FACTOR
 description: The user has no second factor (TOTP or passkey) set up.
 order: 166
+nav: false
 ---
 
 # NO_SECOND_FACTOR

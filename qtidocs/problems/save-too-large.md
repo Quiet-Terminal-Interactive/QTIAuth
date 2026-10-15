@@ -2,6 +2,7 @@
 title: SAVE_TOO_LARGE
 description: The cloud save data exceeds the configured slot size limit.
 order: 188
+nav: false
 ---
 
 # SAVE_TOO_LARGE

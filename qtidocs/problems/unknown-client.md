@@ -2,6 +2,7 @@
 title: UNKNOWN_CLIENT
 description: The `client_id` in the request is not recognized.
 order: 23
+nav: false
 ---
 
 # UNKNOWN_CLIENT

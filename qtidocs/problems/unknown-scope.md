@@ -2,6 +2,7 @@
 title: UNKNOWN_SCOPE
 description: The OAuth scope is not defined in the system.
 order: 241
+nav: false
 ---
 
 # UNKNOWN_SCOPE

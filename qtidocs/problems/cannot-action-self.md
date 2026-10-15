@@ -2,6 +2,7 @@
 title: CANNOT_ACTION_SELF
 description: A moderator cannot take a moderation action against themselves.
 order: 198
+nav: false
 ---
 
 # CANNOT_ACTION_SELF

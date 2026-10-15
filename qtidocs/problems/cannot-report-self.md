@@ -2,6 +2,7 @@
 title: CANNOT_REPORT_SELF
 description: Users cannot submit reports against themselves.
 order: 199
+nav: false
 ---
 
 # CANNOT_REPORT_SELF

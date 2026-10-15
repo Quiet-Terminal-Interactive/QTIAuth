@@ -2,6 +2,7 @@
 title: INVALID_ACCOUNT_CHOICE
 description: An invalid account was selected during a social sign-in flow where multiple accounts were available.
 order: 5
+nav: false
 ---
 
 # INVALID_ACCOUNT_CHOICE

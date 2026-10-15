@@ -2,6 +2,7 @@
 title: STEAM_NOT_CONFIGURED
 description: The Steam publisher API key is not configured.
 order: 268
+nav: false
 ---
 
 # STEAM_NOT_CONFIGURED

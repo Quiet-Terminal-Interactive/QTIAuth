@@ -2,6 +2,7 @@
 title: WEB_UNAVAILABLE
 description: The web frontend service is not running.
 order: 270
+nav: false
 ---
 
 # WEB_UNAVAILABLE

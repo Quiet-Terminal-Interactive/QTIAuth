@@ -2,6 +2,7 @@
 title: ACHIEVEMENT_NOT_FOUND
 description: The achievement does not exist.
 order: 76
+nav: false
 ---
 
 # ACHIEVEMENT_NOT_FOUND

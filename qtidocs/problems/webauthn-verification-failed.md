@@ -2,6 +2,7 @@
 title: WEBAUTHN_VERIFICATION_FAILED
 description: WebAuthn registration or authentication verification failed.
 order: 26
+nav: false
 ---
 
 # WEBAUTHN_VERIFICATION_FAILED

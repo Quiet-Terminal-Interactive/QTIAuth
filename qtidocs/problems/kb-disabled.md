@@ -2,6 +2,7 @@
 title: KB_DISABLED
 description: The knowledge base feature is disabled in configuration.
 order: 103
+nav: false
 ---
 
 # KB_DISABLED

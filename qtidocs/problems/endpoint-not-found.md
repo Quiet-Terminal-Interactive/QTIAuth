@@ -2,6 +2,7 @@
 title: ENDPOINT_NOT_FOUND
 description: The webhook endpoint was not found.
 order: 93
+nav: false
 ---
 
 # ENDPOINT_NOT_FOUND

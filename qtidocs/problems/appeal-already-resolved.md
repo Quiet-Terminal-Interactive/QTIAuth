@@ -2,6 +2,7 @@
 title: APPEAL_ALREADY_RESOLVED
 description: The appeal has already been resolved.
 order: 145
+nav: false
 ---
 
 # APPEAL_ALREADY_RESOLVED

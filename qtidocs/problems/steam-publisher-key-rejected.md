@@ -2,6 +2,7 @@
 title: STEAM_PUBLISHER_KEY_REJECTED
 description: The Steam Web API rejected the publisher API key.
 order: 259
+nav: false
 ---
 
 # STEAM_PUBLISHER_KEY_REJECTED

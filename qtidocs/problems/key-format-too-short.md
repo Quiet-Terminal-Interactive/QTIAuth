@@ -2,6 +2,7 @@
 title: KEY_FORMAT_TOO_SHORT
 description: The key format template must have at least 12 random character slots.
 order: 211
+nav: false
 ---
 
 # KEY_FORMAT_TOO_SHORT

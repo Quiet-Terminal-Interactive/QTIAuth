@@ -2,6 +2,7 @@
 title: SERVICE_NOT_RUNNING
 description: An internal NATS service is not responding.
 order: 266
+nav: false
 ---
 
 # SERVICE_NOT_RUNNING

@@ -2,6 +2,7 @@
 title: USERNAME_YEARLY_LIMIT
 description: The yearly username change limit has been reached.
 order: 250
+nav: false
 ---
 
 # USERNAME_YEARLY_LIMIT

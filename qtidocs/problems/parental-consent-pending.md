@@ -2,6 +2,7 @@
 title: PARENTAL_CONSENT_PENDING
 description: The account is in the `pending_parental_consent` state.
 order: 65
+nav: false
 ---
 
 # PARENTAL_CONSENT_PENDING

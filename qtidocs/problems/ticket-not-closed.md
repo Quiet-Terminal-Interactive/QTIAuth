@@ -2,6 +2,7 @@
 title: TICKET_NOT_CLOSED
 description: The ticket must be closed before this action can be performed.
 order: 178
+nav: false
 ---
 
 # TICKET_NOT_CLOSED

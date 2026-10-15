@@ -2,6 +2,7 @@
 title: BATCH_NOT_FOUND
 description: The key batch was not found.
 order: 84
+nav: false
 ---
 
 # BATCH_NOT_FOUND

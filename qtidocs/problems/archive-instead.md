@@ -2,6 +2,7 @@
 title: ARCHIVE_INSTEAD
 description: The game is not in draft status; it must be archived or have its status changed instead of being deleted.
 order: 147
+nav: false
 ---
 
 # ARCHIVE_INSTEAD

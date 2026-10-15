@@ -2,6 +2,7 @@
 title: PRODUCT_RETIRED
 description: The product has been retired and cannot be granted.
 order: 167
+nav: false
 ---
 
 # PRODUCT_RETIRED

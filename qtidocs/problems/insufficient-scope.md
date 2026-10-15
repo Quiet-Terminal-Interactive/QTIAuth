@@ -2,6 +2,7 @@
 title: INSUFFICIENT_SCOPE
 description: The OAuth access token does not include the required scope for this endpoint.
 order: 61
+nav: false
 ---
 
 # INSUFFICIENT_SCOPE

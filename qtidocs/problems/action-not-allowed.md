@@ -2,6 +2,7 @@
 title: ACTION_NOT_ALLOWED
 description: The requested action is not permitted in this ticket flow.
 order: 191
+nav: false
 ---
 
 # ACTION_NOT_ALLOWED

@@ -2,6 +2,7 @@
 title: TEXT_NOT_ALLOWED
 description: The text content was blocked by the text filter.
 order: 233
+nav: false
 ---
 
 # TEXT_NOT_ALLOWED

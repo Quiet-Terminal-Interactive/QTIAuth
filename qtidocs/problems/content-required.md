@@ -2,6 +2,7 @@
 title: CONTENT_REQUIRED
 description: A content ID is required for `remove_content` moderation actions.
 order: 200
+nav: false
 ---
 
 # CONTENT_REQUIRED

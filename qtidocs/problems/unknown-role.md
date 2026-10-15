@@ -2,6 +2,7 @@
 title: UNKNOWN_ROLE
 description: The user role name is not recognized.
 order: 239
+nav: false
 ---
 
 # UNKNOWN_ROLE

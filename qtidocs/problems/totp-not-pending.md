@@ -2,6 +2,7 @@
 title: TOTP_NOT_PENDING
 description: There is no pending TOTP setup to confirm.
 order: 181
+nav: false
 ---
 
 # TOTP_NOT_PENDING

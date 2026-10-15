@@ -2,6 +2,7 @@
 title: WRONG_PRINCIPAL
 description: The principal type (user vs.
 order: 75
+nav: false
 ---
 
 # WRONG_PRINCIPAL

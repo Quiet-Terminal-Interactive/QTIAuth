@@ -2,6 +2,7 @@
 title: STATS_DISABLED
 description: The stats feature is disabled in configuration.
 order: 127
+nav: false
 ---
 
 # STATS_DISABLED

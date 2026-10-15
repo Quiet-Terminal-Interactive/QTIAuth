@@ -2,6 +2,7 @@
 title: GUARDIAN_EMAIL_CHANGE_LIMIT
 description: The guardian email change limit has been reached.
 order: 246
+nav: false
 ---
 
 # GUARDIAN_EMAIL_CHANGE_LIMIT

@@ -2,6 +2,7 @@
 title: GAME_HAS_ENTITLEMENTS
 description: The game cannot be deleted because it has active entitlements.
 order: 155
+nav: false
 ---
 
 # GAME_HAS_ENTITLEMENTS

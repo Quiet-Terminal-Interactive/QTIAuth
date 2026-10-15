@@ -2,6 +2,7 @@
 title: OUTDATED_LEGAL_VERSION
 description: The submitted legal version is outdated; a newer version has taken effect.
 order: 217
+nav: false
 ---
 
 # OUTDATED_LEGAL_VERSION

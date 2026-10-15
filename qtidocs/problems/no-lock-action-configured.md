@@ -2,6 +2,7 @@
 title: NO_LOCK_ACTION_CONFIGURED
 description: No lock action is configured for CSEA case processing.
 order: 213
+nav: false
 ---
 
 # NO_LOCK_ACTION_CONFIGURED

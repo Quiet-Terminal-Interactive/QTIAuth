@@ -2,6 +2,7 @@
 title: STEAM_OPENID_INVALID
 description: The Steam OpenID callback response is invalid or appears to have been tampered with.
 order: 21
+nav: false
 ---
 
 # STEAM_OPENID_INVALID

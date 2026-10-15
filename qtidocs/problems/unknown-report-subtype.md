@@ -2,6 +2,7 @@
 title: UNKNOWN_REPORT_SUBTYPE
 description: The report subtype is not recognized.
 order: 237
+nav: false
 ---
 
 # UNKNOWN_REPORT_SUBTYPE

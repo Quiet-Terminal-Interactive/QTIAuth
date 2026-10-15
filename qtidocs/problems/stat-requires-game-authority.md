@@ -2,6 +2,7 @@
 title: STAT_REQUIRES_GAME_AUTHORITY
 description: Updating this stat requires game-authority credentials.
 order: 69
+nav: false
 ---
 
 # STAT_REQUIRES_GAME_AUTHORITY

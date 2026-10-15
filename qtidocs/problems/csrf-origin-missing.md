@@ -2,6 +2,7 @@
 title: CSRF_ORIGIN_MISSING
 description: A cookie-credentialed request is missing the `Origin` header.
 order: 53
+nav: false
 ---
 
 # CSRF_ORIGIN_MISSING

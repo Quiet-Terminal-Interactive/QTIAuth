@@ -2,6 +2,7 @@
 title: CATEGORY_NOT_GUEST_ALLOWED
 description: This support category is not open to unauthenticated or guest users.
 order: 50
+nav: false
 ---
 
 # CATEGORY_NOT_GUEST_ALLOWED

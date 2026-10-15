@@ -2,6 +2,7 @@
 title: BAD_REQUEST
 description: The request is malformed or contains invalid parameters.
 order: 2
+nav: false
 ---
 
 # BAD_REQUEST

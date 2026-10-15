@@ -2,6 +2,7 @@
 title: STEAM_UNAVAILABLE
 description: The Steam Web API is not reachable.
 order: 260
+nav: false
 ---
 
 # STEAM_UNAVAILABLE

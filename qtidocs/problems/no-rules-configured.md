@@ -2,6 +2,7 @@
 title: NO_RULES_CONFIGURED
 description: No safety rules are configured in this deployment.
 order: 215
+nav: false
 ---
 
 # NO_RULES_CONFIGURED

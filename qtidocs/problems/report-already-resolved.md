@@ -2,6 +2,7 @@
 title: REPORT_ALREADY_RESOLVED
 description: The safety report has already been actioned or dismissed.
 order: 169
+nav: false
 ---
 
 # REPORT_ALREADY_RESOLVED

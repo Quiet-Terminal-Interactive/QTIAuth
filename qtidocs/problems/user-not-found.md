@@ -2,6 +2,7 @@
 title: USER_NOT_FOUND
 description: The user was not found.
 order: 135
+nav: false
 ---
 
 # USER_NOT_FOUND

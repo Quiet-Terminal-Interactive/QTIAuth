@@ -2,6 +2,7 @@
 title: WRONG_CREDENTIAL_TYPE
 description: The credential type (session, OAuth, service, game-authoritative) is not accepted on this route.
 order: 43
+nav: false
 ---
 
 # WRONG_CREDENTIAL_TYPE

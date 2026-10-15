@@ -2,6 +2,7 @@
 title: WRONG_GAME
 description: The game-authority credentials belong to a different game.
 order: 74
+nav: false
 ---
 
 # WRONG_GAME

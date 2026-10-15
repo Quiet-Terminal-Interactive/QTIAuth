@@ -2,6 +2,7 @@
 title: GAME_NOT_FOUND
 description: The game was not found, or is not publicly visible to the caller.
 order: 98
+nav: false
 ---
 
 # GAME_NOT_FOUND

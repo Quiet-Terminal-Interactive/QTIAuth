@@ -2,6 +2,7 @@
 title: NO_REPORTED_USER
 description: A protective action requires the CSEA report to have a reported user.
 order: 214
+nav: false
 ---
 
 # NO_REPORTED_USER

@@ -2,6 +2,7 @@
 title: CATEGORY_NOT_FOUND
 description: The support or knowledge base category was not found.
 order: 86
+nav: false
 ---
 
 # CATEGORY_NOT_FOUND

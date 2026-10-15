@@ -2,6 +2,7 @@
 title: ATTACH_AFTER_CREATE
 description: Attachments cannot be included at ticket creation; they must be added in a reply.
 order: 194
+nav: false
 ---
 
 # ATTACH_AFTER_CREATE

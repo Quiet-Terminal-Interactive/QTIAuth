@@ -2,6 +2,7 @@
 title: GUARDIAN_CONTROLLED
 description: This setting is managed by the user's guardian and cannot be changed by the child.
 order: 59
+nav: false
 ---
 
 # GUARDIAN_CONTROLLED

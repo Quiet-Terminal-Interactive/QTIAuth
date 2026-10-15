@@ -2,6 +2,7 @@
 title: UNLINK_COOLDOWN
 description: The social identity was linked too recently to be unlinked.
 order: 248
+nav: false
 ---
 
 # UNLINK_COOLDOWN

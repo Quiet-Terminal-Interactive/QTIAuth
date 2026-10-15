@@ -2,6 +2,7 @@
 title: INVALID_STEAM_ID
 description: The Steam ID format is invalid; it must be a 17-digit numeric string.
 order: 210
+nav: false
 ---
 
 # INVALID_STEAM_ID

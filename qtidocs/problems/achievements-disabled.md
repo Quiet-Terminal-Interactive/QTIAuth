@@ -2,6 +2,7 @@
 title: ACHIEVEMENTS_DISABLED
 description: The achievements feature is disabled in configuration.
 order: 77
+nav: false
 ---
 
 # ACHIEVEMENTS_DISABLED

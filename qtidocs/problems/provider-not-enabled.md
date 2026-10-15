@@ -2,6 +2,7 @@
 title: PROVIDER_NOT_ENABLED
 description: The social login provider is not enabled.
 order: 116
+nav: false
 ---
 
 # PROVIDER_NOT_ENABLED

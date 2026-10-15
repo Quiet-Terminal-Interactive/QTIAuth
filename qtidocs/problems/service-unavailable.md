@@ -2,6 +2,7 @@
 title: SERVICE_UNAVAILABLE
 description: A downstream service instance is not running.
 order: 267
+nav: false
 ---
 
 # SERVICE_UNAVAILABLE

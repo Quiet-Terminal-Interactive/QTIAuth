@@ -2,6 +2,7 @@
 title: USERNAME_INVALID
 description: The username format is invalid due to length or character restrictions.
 order: 243
+nav: false
 ---
 
 # USERNAME_INVALID

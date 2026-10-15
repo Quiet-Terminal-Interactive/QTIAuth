@@ -2,6 +2,7 @@
 title: EMAIL_VERIFICATION_REQUIRED
 description: The user's email address has not yet been verified.
 order: 54
+nav: false
 ---
 
 # EMAIL_VERIFICATION_REQUIRED

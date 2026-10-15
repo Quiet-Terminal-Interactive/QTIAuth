@@ -2,6 +2,7 @@
 title: TICKETS_DISABLED
 description: Support tickets are disabled in configuration.
 order: 131
+nav: false
 ---
 
 # TICKETS_DISABLED

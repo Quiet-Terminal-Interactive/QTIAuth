@@ -2,6 +2,7 @@
 title: DEVICE_ID_REQUIRED
 description: A device ID is required when using device-binding licensing mode.
 order: 201
+nav: false
 ---
 
 # DEVICE_ID_REQUIRED

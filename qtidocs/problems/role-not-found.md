@@ -2,6 +2,7 @@
 title: ROLE_NOT_FOUND
 description: The user role was not found.
 order: 121
+nav: false
 ---
 
 # ROLE_NOT_FOUND

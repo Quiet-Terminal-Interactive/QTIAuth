@@ -2,6 +2,7 @@
 title: TOTP_ALREADY_ENABLED
 description: A TOTP authenticator is already confirmed and active on this account.
 order: 180
+nav: false
 ---
 
 # TOTP_ALREADY_ENABLED

@@ -2,6 +2,7 @@
 title: CASE_NOT_FOUND
 description: The CSEA case was not found.
 order: 85
+nav: false
 ---
 
 # CASE_NOT_FOUND

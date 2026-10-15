@@ -2,6 +2,7 @@
 title: CLIENT_LIMIT_REACHED
 description: The user has reached the maximum number of OAuth applications.
 order: 151
+nav: false
 ---
 
 # CLIENT_LIMIT_REACHED

@@ -2,6 +2,7 @@
 title: TICKET_CLOSED
 description: The support ticket is closed.
 order: 177
+nav: false
 ---
 
 # TICKET_CLOSED

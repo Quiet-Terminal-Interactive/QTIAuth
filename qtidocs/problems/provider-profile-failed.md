@@ -2,6 +2,7 @@
 title: PROVIDER_PROFILE_FAILED
 description: The OAuth provider userinfo or profile endpoint failed.
 order: 256
+nav: false
 ---
 
 # PROVIDER_PROFILE_FAILED

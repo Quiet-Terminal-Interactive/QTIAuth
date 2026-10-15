@@ -2,6 +2,7 @@
 title: CATEGORY_LOCKED
 description: The selected feedback or settings category is locked.
 order: 49
+nav: false
 ---
 
 # CATEGORY_LOCKED

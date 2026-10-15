@@ -2,6 +2,7 @@
 title: FAMILY_SHARING_DENIED
 description: This game disallows Steam family sharing.
 order: 55
+nav: false
 ---
 
 # FAMILY_SHARING_DENIED

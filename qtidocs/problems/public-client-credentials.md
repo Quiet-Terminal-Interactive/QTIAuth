@@ -2,6 +2,7 @@
 title: PUBLIC_CLIENT_CREDENTIALS
 description: Public OAuth clients cannot use the `client_credentials` grant.
 order: 228
+nav: false
 ---
 
 # PUBLIC_CLIENT_CREDENTIALS

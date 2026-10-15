@@ -2,6 +2,7 @@
 title: GUEST_TOKEN_REQUIRED
 description: The guest ticket flow requires a URL token that was not provided.
 order: 28
+nav: false
 ---
 
 # GUEST_TOKEN_REQUIRED

@@ -2,6 +2,7 @@
 title: DEVICE_LIMIT_REACHED
 description: The user has reached the maximum number of licensed devices.
 order: 153
+nav: false
 ---
 
 # DEVICE_LIMIT_REACHED

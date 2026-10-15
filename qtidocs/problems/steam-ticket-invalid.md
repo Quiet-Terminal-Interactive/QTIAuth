@@ -2,6 +2,7 @@
 title: STEAM_TICKET_INVALID
 description: The Steam session ticket failed validation against the Steam Web API.
 order: 39
+nav: false
 ---
 
 # STEAM_TICKET_INVALID

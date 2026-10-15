@@ -2,6 +2,7 @@
 title: SCOPE_NOT_SELF_SERVICE
 description: The scope is hidden, game-client-only, or service-only and cannot be self-registered.
 order: 230
+nav: false
 ---
 
 # SCOPE_NOT_SELF_SERVICE

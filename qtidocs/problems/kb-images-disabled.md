@@ -2,6 +2,7 @@
 title: KB_IMAGES_DISABLED
 description: Knowledge base images are disabled in configuration.
 order: 104
+nav: false
 ---
 
 # KB_IMAGES_DISABLED

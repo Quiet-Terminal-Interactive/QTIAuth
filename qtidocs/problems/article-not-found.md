@@ -2,6 +2,7 @@
 title: ARTICLE_NOT_FOUND
 description: The knowledge base article was not found.
 order: 80
+nav: false
 ---
 
 # ARTICLE_NOT_FOUND

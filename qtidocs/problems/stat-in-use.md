@@ -2,6 +2,7 @@
 title: STAT_IN_USE
 description: The stat is referenced by a leaderboard and cannot be deleted.
 order: 175
+nav: false
 ---
 
 # STAT_IN_USE

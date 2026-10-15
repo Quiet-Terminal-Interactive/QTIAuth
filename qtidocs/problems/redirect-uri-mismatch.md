@@ -2,6 +2,7 @@
 title: REDIRECT_URI_MISMATCH
 description: The `redirect_uri` supplied is not registered for this OAuth client.
 order: 19
+nav: false
 ---
 
 # REDIRECT_URI_MISMATCH

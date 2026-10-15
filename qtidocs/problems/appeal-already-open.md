@@ -2,6 +2,7 @@
 title: APPEAL_ALREADY_OPEN
 description: There is already an open appeal for this moderation action.
 order: 144
+nav: false
 ---
 
 # APPEAL_ALREADY_OPEN

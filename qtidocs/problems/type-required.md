@@ -2,6 +2,7 @@
 title: TYPE_REQUIRED
 description: The `type` field must be specified when flagging content.
 order: 234
+nav: false
 ---
 
 # TYPE_REQUIRED

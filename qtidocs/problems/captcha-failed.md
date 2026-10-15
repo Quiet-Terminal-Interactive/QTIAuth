@@ -2,6 +2,7 @@
 title: CAPTCHA_FAILED
 description: The CAPTCHA solution submitted with the request was incorrect.
 order: 273
+nav: false
 ---
 
 # CAPTCHA_FAILED

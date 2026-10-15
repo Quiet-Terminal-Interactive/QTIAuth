@@ -2,6 +2,7 @@
 title: NO_PENDING_GUARDIAN
 description: There is no pending guardian invitation to cancel.
 order: 111
+nav: false
 ---
 
 # NO_PENDING_GUARDIAN

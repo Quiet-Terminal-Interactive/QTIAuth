@@ -2,6 +2,7 @@
 title: IDENTITY_IN_USE
 description: The social identity is already connected to a different account.
 order: 156
+nav: false
 ---
 
 # IDENTITY_IN_USE

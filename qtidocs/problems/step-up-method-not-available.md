@@ -2,6 +2,7 @@
 title: STEP_UP_METHOD_NOT_AVAILABLE
 description: The requested step-up method is not available for this user.
 order: 22
+nav: false
 ---
 
 # STEP_UP_METHOD_NOT_AVAILABLE

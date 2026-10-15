@@ -2,6 +2,7 @@
 title: INVALID_REQUEST_URI
 description: The PAR `request_uri` is invalid, has expired, or does not belong to this client.
 order: 9
+nav: false
 ---
 
 # INVALID_REQUEST_URI

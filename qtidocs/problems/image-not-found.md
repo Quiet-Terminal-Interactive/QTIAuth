@@ -2,6 +2,7 @@
 title: IMAGE_NOT_FOUND
 description: The knowledge base image was not found.
 order: 102
+nav: false
 ---
 
 # IMAGE_NOT_FOUND

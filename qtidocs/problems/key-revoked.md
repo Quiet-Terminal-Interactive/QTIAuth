@@ -2,6 +2,7 @@
 title: KEY_REVOKED
 description: The redemption key has been explicitly revoked.
 order: 13
+nav: false
 ---
 
 # KEY_REVOKED

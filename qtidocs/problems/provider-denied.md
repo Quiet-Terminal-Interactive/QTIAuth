@@ -2,6 +2,7 @@
 title: PROVIDER_DENIED
 description: The OAuth or social provider denied the authorization, typically because the user cancelled.
 order: 16
+nav: false
 ---
 
 # PROVIDER_DENIED

@@ -2,6 +2,7 @@
 title: NAME_USES_PRODUCT_NAME
 description: The app name includes the product name without verification.
 order: 212
+nav: false
 ---
 
 # NAME_USES_PRODUCT_NAME

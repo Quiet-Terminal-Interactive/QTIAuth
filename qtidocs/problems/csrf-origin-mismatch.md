@@ -2,6 +2,7 @@
 title: CSRF_ORIGIN_MISMATCH
 description: The request came from an origin that is not registered for this surface.
 order: 52
+nav: false
 ---
 
 # CSRF_ORIGIN_MISMATCH

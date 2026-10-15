@@ -2,6 +2,7 @@
 title: SESSION_NOT_FOUND
 description: The user session was not found.
 order: 125
+nav: false
 ---
 
 # SESSION_NOT_FOUND

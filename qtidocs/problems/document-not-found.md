@@ -2,6 +2,7 @@
 title: DOCUMENT_NOT_FOUND
 description: The legal document was not found.
 order: 92
+nav: false
 ---
 
 # DOCUMENT_NOT_FOUND

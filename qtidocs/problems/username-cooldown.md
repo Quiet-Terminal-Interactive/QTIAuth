@@ -2,6 +2,7 @@
 title: USERNAME_COOLDOWN
 description: The username was changed too recently; the cooldown period has not elapsed.
 order: 249
+nav: false
 ---
 
 # USERNAME_COOLDOWN

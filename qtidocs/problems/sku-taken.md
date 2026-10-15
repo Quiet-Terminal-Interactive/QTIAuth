@@ -2,6 +2,7 @@
 title: SKU_TAKEN
 description: The product SKU is already in use.
 order: 173
+nav: false
 ---
 
 # SKU_TAKEN

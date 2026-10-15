@@ -2,6 +2,7 @@
 title: LEADERBOARDS_DISABLED
 description: Leaderboards are disabled in configuration.
 order: 107
+nav: false
 ---
 
 # LEADERBOARDS_DISABLED

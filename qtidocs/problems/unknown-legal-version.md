@@ -2,6 +2,7 @@
 title: UNKNOWN_LEGAL_VERSION
 description: The legal document version is not recognized.
 order: 236
+nav: false
 ---
 
 # UNKNOWN_LEGAL_VERSION

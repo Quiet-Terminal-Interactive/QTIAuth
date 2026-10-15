@@ -2,6 +2,7 @@
 title: HISTORY_NOT_PUBLIC
 description: The legal document version history is not publicly accessible.
 order: 100
+nav: false
 ---
 
 # HISTORY_NOT_PUBLIC

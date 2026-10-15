@@ -2,6 +2,7 @@
 title: UNKNOWN_CATEGORY
 description: The support or knowledge base category ID is unknown.
 order: 132
+nav: false
 ---
 
 # UNKNOWN_CATEGORY

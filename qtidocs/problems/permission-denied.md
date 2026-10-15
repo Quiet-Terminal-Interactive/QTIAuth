@@ -2,6 +2,7 @@
 title: PERMISSION_DENIED
 description: The session does not have the required permission for this action.
 order: 66
+nav: false
 ---
 
 # PERMISSION_DENIED

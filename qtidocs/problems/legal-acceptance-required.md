@@ -2,6 +2,7 @@
 title: LEGAL_ACCEPTANCE_REQUIRED
 description: Required legal documents have not been accepted.
 order: 62
+nav: false
 ---
 
 # LEGAL_ACCEPTANCE_REQUIRED

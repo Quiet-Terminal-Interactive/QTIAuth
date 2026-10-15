@@ -2,6 +2,7 @@
 title: USERNAME_NOT_AVAILABLE
 description: The username is already taken or reserved.
 order: 182
+nav: false
 ---
 
 # USERNAME_NOT_AVAILABLE

@@ -2,6 +2,7 @@
 title: ALREADY_PROTECTED
 description: The CSEA case already has a protective action linked.
 order: 141
+nav: false
 ---
 
 # ALREADY_PROTECTED

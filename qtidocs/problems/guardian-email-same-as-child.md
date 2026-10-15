@@ -2,6 +2,7 @@
 title: GUARDIAN_EMAIL_SAME_AS_CHILD
 description: The guardian email address must be different from the child's email.
 order: 206
+nav: false
 ---
 
 # GUARDIAN_EMAIL_SAME_AS_CHILD

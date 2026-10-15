@@ -2,6 +2,7 @@
 title: PLAYER_TOKEN_GAME_MISMATCH
 description: The player token was issued for a different game than the one being accessed.
 order: 38
+nav: false
 ---
 
 # PLAYER_TOKEN_GAME_MISMATCH

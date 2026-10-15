@@ -2,6 +2,7 @@
 title: INVALID_RESET_PERIOD
 description: The leaderboard reset period value is not valid.
 order: 209
+nav: false
 ---
 
 # INVALID_RESET_PERIOD

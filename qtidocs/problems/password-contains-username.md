@@ -2,6 +2,7 @@
 title: PASSWORD_CONTAINS_USERNAME
 description: The password contains the user's username.
 order: 220
+nav: false
 ---
 
 # PASSWORD_CONTAINS_USERNAME

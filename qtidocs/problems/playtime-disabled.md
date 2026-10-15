@@ -2,6 +2,7 @@
 title: PLAYTIME_DISABLED
 description: Playtime tracking is disabled in configuration.
 order: 114
+nav: false
 ---
 
 # PLAYTIME_DISABLED

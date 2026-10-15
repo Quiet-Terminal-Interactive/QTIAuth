@@ -2,6 +2,7 @@
 title: REPORT_TARGET_REQUIRED
 description: The report must specify a user, a piece of content, or both.
 order: 229
+nav: false
 ---
 
 # REPORT_TARGET_REQUIRED

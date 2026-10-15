@@ -2,6 +2,7 @@
 title: KEYS_DISABLED
 description: Game key redemption is disabled in configuration.
 order: 105
+nav: false
 ---
 
 # KEYS_DISABLED
