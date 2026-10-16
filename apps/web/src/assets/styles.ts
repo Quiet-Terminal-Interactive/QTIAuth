@@ -47,7 +47,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: var(--space-5) 0; }
 .nav a:hover { color: var(--text); background: var(--hover); text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--text); background: var(--surface-raised); }
 .menu { position: relative; }
-.menu > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: var(--space-2); padding: 4px 8px 4px 4px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-raised); }
+.menu > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: var(--space-2); padding: 4px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-raised); }
 .menu > summary::-webkit-details-marker { display: none; }
 .menu[open] > summary { box-shadow: var(--focus); }
 .menu-panel { position: absolute; right: 0; top: calc(100% + 8px); min-width: 220px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: var(--space-2); display: grid; gap: 2px; }
