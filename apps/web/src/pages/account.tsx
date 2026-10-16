@@ -91,10 +91,9 @@ async function home(rc: RequestContext) {
         </Alert>
       ) : null}
       <div class="grid-3">
-        <a class="tile link-card accent" href={href(rc, "/settings/security")}>
+        <a class="tile link-card" href={href(rc, "/settings/security")}>
           <div class="label">{rc.t("home.security")}</div>
           <div class="value">{twoFactor ? <Badge color="green">{rc.t("security.totp_on")}</Badge> : <Badge color="yellow">{rc.t("security.totp_off")}</Badge>}</div>
-          <div class="muted">{twoFactor ? rc.t("home.security_good") : rc.t("home.security_add")}</div>
         </a>
         <a class="tile link-card" href={href(rc, "/settings/sessions")}>
           <div class="label">{rc.t("home.sessions")}</div>
