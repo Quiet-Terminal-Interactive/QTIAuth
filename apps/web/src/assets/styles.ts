@@ -169,7 +169,8 @@ legend { padding: 0 6px; font-weight: 600; }
 .btn.danger-ghost:hover { background: var(--tint-danger); filter: none; }
 .btn.sm { min-height: 32px; padding: 0 12px; font-size: 0.88rem; }
 .btn-provider { justify-content: flex-start; gap: var(--space-3); }
-.btn-provider .dot { width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; font-size: 0.7rem; font-weight: 800; color: var(--bg); background: var(--text-muted); }
+.btn-provider .dot { width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; font-size: 0.7rem; font-weight: 800; color: var(--bg); background: var(--text-muted); flex: none; }
+.btn-provider img.dot { background: none; object-fit: contain; }
 .inline-form { display: inline; }
 .link-button { background: none; border: 0; padding: 0; font: inherit; color: var(--primary); cursor: pointer; }
 .link-button:hover { text-decoration: underline; }

@@ -79,10 +79,15 @@ export function captchaValue(rc: RequestContext): string | undefined {
   return rc.form.captcha || rc.form["h-captcha-response"] || rc.form["cf-turnstile-response"] || rc.form["frc-captcha-solution"] || undefined;
 }
 
-const PROVIDER_LABELS: Record<string, string> = { google: "Google", github: "GitHub", discord: "Discord", steam: "Steam" };
+const PROVIDER_META: Record<string, { label: string; icon: string }> = {
+  google: { label: "Google", icon: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/3840px-Google_%22G%22_logo.svg.png" },
+  github: { label: "GitHub", icon: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Codicons_–_github-inverted.svg/960px-Codicons_–_github-inverted.svg.png" },
+  discord: { label: "Discord", icon: "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d80db9971f10a9757c99_Symbol.svg" },
+  steam: { label: "Steam", icon: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/960px-Steam_icon_logo.svg.png" },
+};
 
 export function providerLabel(id: string): string {
-  return PROVIDER_LABELS[id] ?? id.replace(/^oidc:/, "").replace(/[_-]/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
+  return PROVIDER_META[id]?.label ?? id.replace(/^oidc:/, "").replace(/[_-]/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
 export function SocialButtons({ rc, providers, returnTo, intent = "login" }: { rc: RequestContext; providers: string[]; returnTo?: string | null; intent?: "login" | "connect" }) {
@@ -92,11 +97,16 @@ export function SocialButtons({ rc, providers, returnTo, intent = "login" }: { r
       {providers.map((p) => {
         const params = new URLSearchParams({ intent });
         if (returnTo) params.set("return_to", returnTo);
+        const icon = PROVIDER_META[p]?.icon;
         return (
           <a class="btn secondary block btn-provider" href={`${rc.surface.apiPath}/v1/auth/social/${encodeURIComponent(p)}/start?${params.toString()}`}>
-            <span class="dot" aria-hidden="true">
-              {providerLabel(p).slice(0, 1)}
-            </span>
+            {icon ? (
+              <img class="dot" src={icon} alt="" aria-hidden="true" />
+            ) : (
+              <span class="dot" aria-hidden="true">
+                {providerLabel(p).slice(0, 1)}
+              </span>
+            )}
             {rc.t("login.with", { provider: providerLabel(p) })}
           </a>
         );
