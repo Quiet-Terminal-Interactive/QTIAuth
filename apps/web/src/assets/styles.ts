@@ -54,7 +54,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: var(--space-5) 0; }
 .menu-panel a, .menu-panel button { display: block; width: 100%; text-align: left; color: var(--text); padding: 8px 10px; border-radius: var(--radius-sm); background: none; border: 0; font: inherit; cursor: pointer; }
 .menu-panel a:hover, .menu-panel button:hover { background: var(--hover); text-decoration: none; }
 .menu-panel .menu-head { padding: 8px 10px; color: var(--text-muted); font-size: 0.85rem; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
-.avatar { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 0.85rem; color: var(--primary-text); background: linear-gradient(135deg, var(--primary), var(--accent)); }
+.avatar { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 0.85rem; color: var(--primary-text); background: linear-gradient(135deg, var(--primary), var(--accent)); object-fit: cover; }
 main { flex: 1; width: 100%; max-width: 1160px; margin: 0 auto; padding: var(--space-6) var(--space-5) var(--space-7); }
 .footer { border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
 .footer-inner { max-width: 1160px; margin: 0 auto; padding: var(--space-5); display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between; }

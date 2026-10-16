@@ -2,7 +2,7 @@ import type { Child, PropsWithChildren } from "hono/jsx";
 import { raw } from "hono/html";
 import type { Problem } from "./api.ts";
 import { errorMessage } from "./i18n/index.ts";
-import { href, initials, surfaceHref, type Me, type RequestContext } from "./context.ts";
+import { gravatarUrl, href, initials, surfaceHref, type Me, type RequestContext } from "./context.ts";
 import type { NavItem } from "./nav.ts";
 
 export function fmtDate(rc: RequestContext, iso: string | null | undefined, opts: Intl.DateTimeFormatOptions = { dateStyle: "medium" }): string {
@@ -104,6 +104,7 @@ function Footer({ rc }: { rc: RequestContext }) {
 export function AppShell(props: PropsWithChildren<{ rc: RequestContext; title: string; nav: NavItem[]; active?: string; me?: Me | null; home?: string; banner?: Child }>) {
   const { rc, me } = props;
   const name = me?.username ?? me?.email ?? null;
+  const avatarUrl = gravatarUrl(me?.email);
   const home = props.home ?? href(rc, "/");
   return (
     <Document rc={rc} title={props.title}>
@@ -123,9 +124,13 @@ export function AppShell(props: PropsWithChildren<{ rc: RequestContext; title: s
           {rc.claims.sub || rc.claims.gid ? (
             <details class="menu">
               <summary aria-label={rc.t("app.account")}>
-                <span class="avatar" aria-hidden="true">
-                  {initials(name)}
-                </span>
+                {avatarUrl ? (
+                  <img class="avatar" src={avatarUrl} alt="" width={30} height={30} aria-hidden="true" />
+                ) : (
+                  <span class="avatar" aria-hidden="true">
+                    {initials(name)}
+                  </span>
+                )}
               </summary>
               <div class="menu-panel">
                 {name ? <div class="menu-head">{rc.t("app.signed_in_as", { name })}</div> : null}

@@ -1,4 +1,5 @@
 import type { IdentityClaims } from "@qtiauth/auth-context";
+import { sha256 } from "@qtiauth/common";
 import { hasPermission, joinPath, type LoadedConfig, type ResolvedSurface, type SurfaceName } from "@qtiauth/config";
 import type { Api, Problem } from "./api.ts";
 import type { Translate } from "./i18n/index.ts";
@@ -192,4 +193,10 @@ export function requirePermission(rc: RequestContext, permission: string): void 
 export function initials(name: string | null | undefined): string {
   const n = (name ?? "?").replace(/[^A-Za-z0-9]/g, "");
   return (n.slice(0, 1) || "?").toUpperCase();
+}
+
+export function gravatarUrl(email: string | null | undefined, size = 60): string | null {
+  if (!email) return null;
+  const hash = sha256(email.trim().toLowerCase());
+  return `https://www.gravatar.com/avatar/${hash}?s=${size}&d=mp`;
 }
